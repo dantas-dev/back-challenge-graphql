@@ -62,7 +62,7 @@ query users {
 
 ### Mutations
 #### CreateUser: create a user
-<details><summary>Query Details</summary>
+<details><summary>Mutation Details</summary>
 
 <p>
   
@@ -78,7 +78,7 @@ mutation createUser {
 </details>
 
 #### CreateProject: create a project
-<details><summary>Query Details</summary>
+<details><summary>Mutation Details</summary>
 
 <p>
   
@@ -100,6 +100,7 @@ mutation createProject {
 
 ## Required
 - Node,Typescript and Graphql with a DB of your choose.
+- Migrations
 - Pagination and Filters (example: by ID and name)
 - TDD (only PL/SR)
 
