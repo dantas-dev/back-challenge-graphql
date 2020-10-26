@@ -11,7 +11,6 @@ To get started with this challenge:
 We'll be looking for **simple, well-designed and tested(only PL/SR)** code in the submission.
 
 Please include a ``INSTRUCTIONS.md``:
-- Add prints of your application in the repository and use them in the readme
 - Setup instructions
 - How did you decide which technologies to use as part of your solution
 - Are there any improvements you could make to your submission
