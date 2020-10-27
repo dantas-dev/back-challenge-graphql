@@ -1,0 +1,24 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": "5433",
+    "username": "postgres",
+    "password": "docker",
+    "database": "graphqlchallenge",
+    "synchronize": true,
+    "logging": true,
+    "entities": [
+        "./src/models/*.ts"
+    ],
+    "migrations": [
+        "./src/database/migrations/*.ts"
+    ],
+    "subscribers": [
+        "src/subscriber/**/*.ts"
+    ],
+    "cli": {
+        "migrationsDir": "./src/database/migrations",
+        "entitiesDir": "src/models",
+        "subscribersDir": "src/subscriber"
+    }
+}

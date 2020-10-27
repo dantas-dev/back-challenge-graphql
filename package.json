@@ -1,0 +1,28 @@
+{
+  "name": "back-challenge-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:breno-alves/back-challenge-graphql.git",
+  "author": "Breno Alves <breno550@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules ./src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.18.2",
+    "class-validator": "^0.12.2",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "graphql": "^15.4.0",
+    "pg": "^8.4.2",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.0",
+    "typeorm": "^0.2.28",
+    "uuidv4": "^6.2.4"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0",
+    "typescript": "^4.0.3"
+  }
+}
