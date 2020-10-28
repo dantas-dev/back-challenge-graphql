@@ -1,26 +1,21 @@
-import { Arg, Field, InputType, Mutation, Query, Resolver } from 'type-graphql';
+import { Arg, Mutation, Query, Resolver } from 'type-graphql';
+
+import UserInput from '../types/UserTypes';
 
 import User from '../../models/User';
 
-@InputType()
-class UserInput {
-    @Field()
-    name: string;
-
-    @Field()
-    email: string;
-}
-
 @Resolver()
-export class UserResolver {
-    @Mutation(() => User)
-    async createUser(@Arg("options", () => UserInput) options: UserInput) {
-        const user = await User.create(options).save();
-        return user;
-    }
+export default class UserResolver {
+  @Mutation(() => User)
+  async createUser(
+    @Arg('options', () => UserInput) options: UserInput,
+  ): Promise<User> {
+    const user = await User.create(options).save();
+    return user;
+  }
 
-    @Query(() => [User])
-    user() {
-        return User.find();
-    }
+  @Query(() => [User])
+  user(): Promise<User[]> {
+    return User.find();
+  }
 }
