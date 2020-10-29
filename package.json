@@ -1,0 +1,37 @@
+{
+  "name": "back-challenge-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:danieldfc/back-challenge-graphql.git",
+  "author": "Daniel Felizardo <daniel.david772@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev:server": "tsnd -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
+    "typeorm": "tsnd -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.18.2",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.5.8",
+    "pg": "^8.4.2",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.0",
+    "typeorm": "^0.2.28",
+    "yarn": "^1.22.10"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.5",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2",
+    "ts-node-dev": "^1.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.0.5"
+  }
+}
