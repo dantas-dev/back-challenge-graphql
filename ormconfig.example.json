@@ -2,9 +2,9 @@
   "type": "postgres",
   "host": "localhost",
   "port": 5432,
-  "username": "docker",
-  "password": "docker",
-  "database": "challengenode",
+  "username": "",
+  "password": "",
+  "database": "",
   "entities": [
     "src/modules/**/infra/typeorm/entities/*.ts"
   ],
