@@ -1,27 +1,29 @@
-# :mag: Instructions
+<h1 align="center">🔎 Instructions</h1>
 
-## :scroll: Table of contents
+<h3 align="center">
+  Challenge - Create project's
+</h3>
 
-- [:hammer: Setup instructions](#wrench-setup-instructions)
-- [:electric_plug: Technologies](#electric_plug-technologies)
-- [:wrench: Improvements](#hammer-improvements)
-- [:bulb: Future features](#bulb-future-features)
+<p align="center">
+  <a href="#hammer-setup-instructions">🔨 Setup Instructions</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#electric_plug-technologies">🔌 Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#wrench-improvements">🔧 Improvements</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#bulb-future-features">💡 Future features</a>&nbsp;&nbsp;&nbsp;
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Apollo%20server-%5E0.18.2-red" />
+  <img src="https://img.shields.io/badge/GraphQL-%5E14.5.8-brightgreen" />
+  <img src="https://img.shields.io/badge/Node.js-%5E12.18.4-green" />
+  <img src="https://img.shields.io/badge/Typescript-%5E4.0.5-blue" />
+  <img src="https://img.shields.io/badge/TypeORM-%5E0.2.28-orange" />
+</p>
 
 ---
 
 ## :hammer: Setup instructions
 
 To be able to run the project, it is necessary that:
-
-<details>
-  <summary>Install the project dependencies</summary>
-
-  <p>Run the following command:</p>
-
-  ```sh
-  $ yarn
-  ```
-</details>
 
 <details>
   <summary>Create file <i>.env</i></summary>
@@ -42,39 +44,43 @@ To be able to run the project, it is necessary that:
   </p>
 </details>
 
-<details>
-  <summary>Run the project migrations</summary>
+<br />
 
-  <p>Run the following command:</p>
+Run the commands below:
 
-  ```sh
-  $ yarn typeorm migration:run
-  ```
-</details>
+```bash
+# Install the dependencies
+$ yarn
 
-<details>
-  <summary>Run in development mode</summary>
+# Use the script to run the migrations
+$ yarn typeorm migration:run
 
-  <p>Run the following command:</p>
+# To finish, run the api service
+$ yarn dev
 
-  ```sh
-  $ yarn dev:server
-  ```
+# Well done, project is started!
 
-  <p>The output must contain the following content:</p>
-
-  ```sh
-  🚀 Server is running http://localhost:4000/
-  ```
-</details>
+# Access playground url
+🚀 Server is running http://localhost:4000/
+```
 
 ---
 
 ## :electric_plug: Technologies
 
+Technologies that I used to develop this application
+
+- [Apollo Server](https://www.apollographql.com/docs/apollo-server/)
+- [GraphQL](https://graphql.org/)
+- [Node.js](https://nodejs.org/en/)
+- [TypeORM](https://typeorm.io/#/)
+- [TypeScript](https://www.typescriptlang.org/)
+
 ---
 
 ## :wrench: Improvements
+
+
 
 ---
 
@@ -82,4 +88,4 @@ To be able to run the project, it is necessary that:
 
 ---
 
->Created by Daniel Felizardo :purple_heart::rocket:
+Made with :purple_heart: by Daniel Felizardo 👋 [See my linkedin](https://www.linkedin.com/in/daniel-felizardo/)
