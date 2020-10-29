@@ -80,11 +80,19 @@ Technologies that I used to develop this application
 
 ## :wrench: Improvements
 
-
+`Eslint`, `prettier` and `editorconfig` have been added, so that it has a ready-made style, as well as for other developers that do not have `VSCode`, to inherit these same settings.
 
 ---
 
 ## :bulb: Future features
+
+- Create deadline for the project;
+- Create tags of projects;
+- Tag filters;
+- Update user information;
+- Update project information;
+- Create authentication flow;
+- Create middleware of authenticate;
 
 ---
 
