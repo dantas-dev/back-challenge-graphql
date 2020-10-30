@@ -5,7 +5,7 @@ import UserInput from '../types/UserTypes';
 import User from '../../models/User';
 
 @Resolver()
-export class UserResolver {
+export default class UserResolver {
   @Mutation(() => User)
   async createUser(
     @Arg('options', () => UserInput) options: UserInput,
@@ -16,11 +16,11 @@ export class UserResolver {
 
   @Query(() => [User])
   async user(
-    @Arg('currentPage', () => Int) currentPage: number,
+    @Arg('currentPage', () => Int, { nullable: true }) currentPage: number,
   ) {
     const users = await User.find();
-    const current = currentPage * 50;
+    const current = (currentPage | 0) * 50;
 
-    return users.slice(current, current + 50);
+    return users.splice(current, current + 50);
   }
 }

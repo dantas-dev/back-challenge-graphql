@@ -24,10 +24,10 @@ export default class ProjectResolver {
 
   @Query(() => [Project])
   async project(
-    @Arg('currentPage', () => Int) currentPage: number,
+    @Arg('currentPage', () => Int, { nullable: true }) currentPage: number,
   ) {
-    const projects = await Project.find();
-    const current = currentPage * 50;
+    const projects = await Project.find({ relations: ['user'] });
+    const current = (currentPage | 0) * 50;
 
     return projects.slice(current, current + 50);
   }

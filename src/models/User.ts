@@ -13,7 +13,7 @@ import Project from './Project';
 export default class User extends BaseEntity {
   @Field(() => Int)
   @PrimaryGeneratedColumn()
-  id: string;
+  id: number;
 
   @Field()
   @Column()
