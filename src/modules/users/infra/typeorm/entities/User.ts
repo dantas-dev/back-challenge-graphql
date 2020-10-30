@@ -1,5 +1,13 @@
-import { Entity, BaseEntity, PrimaryGeneratedColumn, Column } from 'typeorm';
 import { ObjectType, Field, Int } from 'type-graphql';
+import {
+  Entity,
+  BaseEntity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToOne,
+} from 'typeorm';
+
+import Project from '@modules/projects/infra/typeorm/entities/Project';
 
 @Entity('users')
 @ObjectType()
@@ -15,4 +23,7 @@ export default class User extends BaseEntity {
   @Field(() => String)
   @Column()
   email: string;
+
+  @OneToOne(() => Project)
+  project?: Project;
 }

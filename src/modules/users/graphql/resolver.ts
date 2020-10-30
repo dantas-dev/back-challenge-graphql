@@ -1,20 +1,20 @@
-import User from '@modules/users/infra/typeorm/entities/User';
+import UsersRepository from '../infra/typeorm/repositories/UsersRepository';
 
 export async function users() {
-  const findUsers = await User.find();
+  const userRepository = new UsersRepository();
 
-  return findUsers;
+  return userRepository.findAll();
 }
 
 export async function createUser(_: any, { input }: any) {
   const { name, email } = input;
-  const findUser = await User.findOne({ where: { email } });
 
-  if (findUser) throw new Error('User already exists');
+  const userRepository = new UsersRepository();
 
-  const user = User.create({ name, email });
-
-  await User.save(user);
+  const user = await userRepository.create({
+    name,
+    email,
+  });
 
   return user;
 }

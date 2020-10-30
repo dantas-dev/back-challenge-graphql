@@ -1,25 +1,20 @@
-import User from '@modules/users/infra/typeorm/entities/User';
-import Project from '../infra/typeorm/entities/Project';
+import ProjectsRepository from '../infra/typeorm/repositories/ProjectsRepository';
 
 export async function projects() {
-  const findProjects = await Project.find();
-
-  return findProjects;
+  const projectRepository = new ProjectsRepository();
+  return projectRepository.findAll();
 }
 
 export async function createProject(_: any, { input }: any) {
   const { name, price, user_id } = input;
 
-  const existProject = await Project.findOne({ where: { name } });
-  const user = await User.findOne(user_id);
+  const projectRepository = new ProjectsRepository();
 
-  if (existProject || !user) {
-    throw new Error('Project already exists or user not found.');
-  }
-
-  const project = Project.create({ name, price, user });
-
-  await project.save();
+  const project = projectRepository.create({
+    name,
+    price,
+    user_id,
+  });
 
   return project;
 }

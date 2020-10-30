@@ -1,7 +1,7 @@
 import { GraphQLList } from 'graphql';
 
+import UserInput from './input';
 import { createUser, users } from './resolver';
-import CreateUserInput from './input';
 
 import UserType from './type';
 
@@ -18,7 +18,7 @@ export const mutations = {
     resolve: createUser,
     args: {
       input: {
-        type: CreateUserInput,
+        type: UserInput,
       },
     },
   },
