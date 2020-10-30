@@ -1,7 +1,9 @@
-import { getRepository, Repository } from 'typeorm';
+import { getRepository, Repository, Like } from 'typeorm';
 
-import IProjectRepository from '@modules/projects/repositories/IProjectRepository';
-import ProjectInput from '@modules/projects/graphql/input';
+import IProjectRepository, {
+  IFindByName,
+} from '@modules/projects/repositories/IProjectRepository';
+import ICreateProjectDTO from '@modules/projects/dtos/ICreateProjectDTO';
 
 import User from '@modules/users/infra/typeorm/entities/User';
 import Project from '../entities/Project';
@@ -15,6 +17,7 @@ export default class ProjectsRepository implements IProjectRepository {
 
   public async findAll(): Promise<Project[]> {
     return this.ormRepository.find({
+      take: 5,
       relations: ['user'],
     });
   }
@@ -25,11 +28,27 @@ export default class ProjectsRepository implements IProjectRepository {
     return project;
   }
 
+  public async findByName({
+    name,
+    limit,
+    page,
+  }: IFindByName): Promise<Project[]> {
+    const project = await this.ormRepository.find({
+      where: {
+        name: Like(`%${name}%`),
+      },
+      take: limit,
+      skip: page,
+    });
+
+    return project;
+  }
+
   public async create({
     name,
     price,
     user_id: id,
-  }: ProjectInput): Promise<Project> {
+  }: ICreateProjectDTO): Promise<Project> {
     const existProject = await this.ormRepository.findOne({ where: { name } });
 
     if (existProject) {
