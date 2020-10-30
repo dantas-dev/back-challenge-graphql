@@ -1,4 +1,4 @@
-import { Arg, Field, InputType, Mutation, Query, Resolver } from 'type-graphql';
+import { Arg, Field, InputType, Int, Mutation, Query, Resolver } from 'type-graphql';
 
 import User from '../../models/User';
 
@@ -14,13 +14,20 @@ class UserInput {
 @Resolver()
 export class UserResolver {
     @Mutation(() => User)
-    async createUser(@Arg("options", () => UserInput) options: UserInput) {
+    async createUser(
+        @Arg('options', () => UserInput) options: UserInput,
+    ) {
         const user = await User.create(options).save();
         return user;
     }
 
     @Query(() => [User])
-    user() {
-        return User.find();
+    async user(
+        @Arg('currentPage', () => Int) currentPage: number,
+    ) {
+        const users = await User.find();
+        const current = currentPage * 50;
+
+        return users.slice(current, current + 50);
     }
 }

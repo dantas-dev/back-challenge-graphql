@@ -19,7 +19,9 @@ class ProjectInput {
 @Resolver()
 export class ProjectResolver {
     @Mutation(() => Project)
-    async createProject(@Arg('options', () => ProjectInput) options: ProjectInput) {
+    async createProject(
+        @Arg('options', () => ProjectInput) options: ProjectInput
+    ) {
         const user = await User.findOne({ where: { id: options.user_id } });
         const dto = {
             name: options.name,
@@ -31,7 +33,12 @@ export class ProjectResolver {
     }
 
     @Query(() => [Project])
-    project() {
-        return Project.find();
+    async project(
+        @Arg('currentPage', () => Int) currentPage: number,
+    ) {
+        const projects = await Project.find();
+        const current = currentPage * 50;
+
+        return projects.slice(current, current + 50);
     }
 }
