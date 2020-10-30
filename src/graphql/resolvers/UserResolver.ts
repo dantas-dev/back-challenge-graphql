@@ -21,6 +21,6 @@ export default class UserResolver {
     const users = await User.find();
     const current = (currentPage | 0) * 50;
 
-    return users.splice(current, current + 50);
+    return users.slice(current, current + 50);
   }
 }
