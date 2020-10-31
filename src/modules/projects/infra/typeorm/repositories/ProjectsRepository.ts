@@ -14,8 +14,7 @@ export default class ProjectsRepository implements IProjectRepository {
     this.ormRepository = getRepository(Project);
   }
 
-  //  deepcode ignore member-access: ignore member access
-  public async findAll({
+  async findAll({
     name = '',
     limit = 10,
     page = 0,
@@ -32,8 +31,7 @@ export default class ProjectsRepository implements IProjectRepository {
     return projects;
   }
 
-  //  deepcode ignore member-access: ignore member access
-  public async findById(id: number): Promise<Project> {
+  async findById(id: number): Promise<Project> {
     const project = await this.ormRepository.findOne(id, {
       relations: ['user'],
     });

@@ -1,9 +1,7 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-//  deepcode ignore class-name: ignore class name
-export default class createProjects1603928401503 implements MigrationInterface {
-  //  deepcode ignore member-access: ignore member access
-  public async up(queryRunner: QueryRunner): Promise<void> {
+export class createProjects1603928401503 implements MigrationInterface {
+  async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
         name: 'projects',
@@ -43,8 +41,7 @@ export default class createProjects1603928401503 implements MigrationInterface {
     );
   }
 
-  //  deepcode ignore member-access: ignore member access
-  public async down(queryRunner: QueryRunner): Promise<void> {
+  async down(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.dropTable('projects');
   }
 }

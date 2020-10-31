@@ -11,13 +11,11 @@ export default class UsersRepository implements IUsersRepository {
     this.ormRepository = getRepository(User);
   }
 
-  //  deepcode ignore member-access: ignore member access
-  public async findAll(): Promise<User[]> {
+  async findAll(): Promise<User[]> {
     return this.ormRepository.find();
   }
 
-  //  deepcode ignore member-access: ignore member access
-  public async create({ name, email }: ICreateUserDTO): Promise<User> {
+  async create({ name, email }: ICreateUserDTO): Promise<User> {
     const existUser = await this.ormRepository.findOne({ where: { email } });
 
     if (existUser) {
