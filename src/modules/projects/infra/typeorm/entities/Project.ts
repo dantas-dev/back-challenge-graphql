@@ -5,7 +5,6 @@ import {
   Column,
   JoinColumn,
   OneToOne,
-  BaseEntity,
 } from 'typeorm';
 import { IsInt, IsDecimal, Length } from 'class-validator';
 
@@ -13,7 +12,7 @@ import User from '@modules/users/infra/typeorm/entities/User';
 
 @ObjectType()
 @Entity('projects')
-export default class Project extends BaseEntity {
+export default class Project {
   @Field(() => Int)
   @IsInt()
   @PrimaryGeneratedColumn('increment')

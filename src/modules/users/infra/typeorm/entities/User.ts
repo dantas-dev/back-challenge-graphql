@@ -1,18 +1,12 @@
 import { ObjectType, Field, Int } from 'type-graphql';
-import {
-  Entity,
-  BaseEntity,
-  PrimaryGeneratedColumn,
-  Column,
-  OneToOne,
-} from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToOne } from 'typeorm';
 import { IsInt, Length } from 'class-validator';
 
 import Project from '@modules/projects/infra/typeorm/entities/Project';
 
 @Entity('users')
 @ObjectType()
-export default class User extends BaseEntity {
+export default class User {
   @Field(() => Int)
   @IsInt()
   @PrimaryGeneratedColumn('increment')

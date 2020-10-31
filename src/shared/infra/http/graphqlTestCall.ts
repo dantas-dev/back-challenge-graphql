@@ -4,7 +4,7 @@ import { Maybe } from 'graphql/jsutils/Maybe';
 import { createSchema } from './schema';
 
 interface IMaybeVariables {
-  [key: string]: any;
+  [key: string]: any; // deepcode ignore no-any: ignore informed variable of any type
 }
 
 interface IOptions {

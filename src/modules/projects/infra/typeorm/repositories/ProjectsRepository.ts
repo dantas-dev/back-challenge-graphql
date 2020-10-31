@@ -57,10 +57,6 @@ export default class ProjectsRepository implements IProjectRepository {
     const usersRepository = getRepository(User);
     const user = await usersRepository.findOne({ where: { id } });
 
-    if (!user) {
-      throw new Error('User not found.');
-    }
-
     const project = this.ormRepository.create({
       name,
       price,
@@ -70,9 +66,5 @@ export default class ProjectsRepository implements IProjectRepository {
     await this.ormRepository.save(project);
 
     return project;
-  }
-
-  public async save(project: Project): Promise<Project> {
-    return this.ormRepository.save(project);
   }
 }
