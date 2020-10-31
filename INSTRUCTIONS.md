@@ -12,8 +12,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Apollo%20server-%5E0.18.2-red" />
-  <img src="https://img.shields.io/badge/GraphQL-%5E14.5.8-brightgreen" />
+  <img src="https://img.shields.io/badge/Apollo%20server-%5E2.18.2-red" />
+  <img src="https://img.shields.io/badge/Express-%5E4.17.1-brightgreen" />
+  <img src="https://img.shields.io/badge/GraphQL-%5E15.3.0-yellow" />
   <img src="https://img.shields.io/badge/Node.js-%5E12.18.4-green" />
   <img src="https://img.shields.io/badge/Typescript-%5E4.0.5-blue" />
   <img src="https://img.shields.io/badge/TypeORM-%5E0.2.28-orange" />
