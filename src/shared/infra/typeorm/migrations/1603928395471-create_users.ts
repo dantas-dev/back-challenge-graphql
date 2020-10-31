@@ -1,6 +1,8 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
+//  deepcode ignore class-name: ignore class name
 export default class createUsers1603928395471 implements MigrationInterface {
+  //  deepcode ignore member-access: ignore member access
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
