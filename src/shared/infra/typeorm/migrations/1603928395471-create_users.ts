@@ -30,6 +30,7 @@ export default class createUsers1603928395471 implements MigrationInterface {
     );
   }
 
+  //  deepcode ignore member-access: ignore member access
   public async down(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.dropTable('users');
   }
