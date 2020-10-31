@@ -1,21 +1,9 @@
-import {
-  GraphQLObjectType,
-  GraphQLNonNull,
-  GraphQLString,
-  GraphQLInt,
-} from 'graphql';
+import { gql } from 'apollo-server';
 
-export default new GraphQLObjectType({
-  name: 'UserType',
-  fields: {
-    id: {
-      type: GraphQLNonNull(GraphQLInt),
-    },
-    name: {
-      type: GraphQLNonNull(GraphQLString),
-    },
-    email: {
-      type: GraphQLNonNull(GraphQLString),
-    },
-  },
-});
+export default gql`
+  type User {
+    id: Int!;
+    name: String!
+    email: String!
+  }
+`;

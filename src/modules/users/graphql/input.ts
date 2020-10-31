@@ -1,13 +1,10 @@
-import { GraphQLInputObjectType, GraphQLString } from 'graphql';
+import { Field, InputType } from 'type-graphql';
 
-export default new GraphQLInputObjectType({
-  name: 'UserInput',
-  fields: {
-    name: {
-      type: GraphQLString,
-    },
-    email: {
-      type: GraphQLString,
-    },
-  },
-});
+@InputType()
+export default class UserInput {
+  @Field()
+  name: string;
+
+  @Field()
+  email: string;
+}

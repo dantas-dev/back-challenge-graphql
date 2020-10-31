@@ -1,39 +1,48 @@
+import { Arg, Mutation, Query, Resolver } from 'type-graphql';
+
+import Project from '../infra/typeorm/entities/Project';
 import ProjectsRepository from '../infra/typeorm/repositories/ProjectsRepository';
 
-export async function projects() {
-  const projectRepository = new ProjectsRepository();
+import ProjectInput from './input';
+import ProjectInputById from './input/ProjectInputById';
+import ProjectInputByName from './input/ProjectInputByName';
 
-  return projectRepository.findAll();
-}
+@Resolver()
+export default class ProjectResolver {
+  @Mutation(() => Project)
+  async createProject(
+    @Arg('projectInput', () => ProjectInput) projectInput: ProjectInput,
+  ) {
+    const { name, price, user_id } = projectInput;
 
-export async function findByName(_: any, { projectInputByName }: any) {
-  const { name, limit, page } = projectInputByName;
+    const projectRepository = new ProjectsRepository();
 
-  const projectRepository = new ProjectsRepository();
+    const project = projectRepository.create({
+      name,
+      price,
+      user_id,
+    });
 
-  return projectRepository.findByName({
-    name,
-    limit,
-    page,
-  });
-}
+    return project;
+  }
 
-export async function findById(_: any, { id }: any) {
-  const projectRepository = new ProjectsRepository();
+  @Query(() => [Project])
+  async projects(
+    @Arg('projectInputByName', () => ProjectInputByName)
+    projectInputByName: ProjectInputByName,
+  ) {
+    const projectRepository = new ProjectsRepository();
 
-  return projectRepository.findById(id);
-}
+    return projectRepository.findAll(projectInputByName);
+  }
 
-export async function createProject(_: any, { projectInput }: any) {
-  const { name, price, user_id } = projectInput;
+  @Query(() => Project)
+  async project(
+    @Arg('options', () => ProjectInputById)
+    options: ProjectInputById,
+  ) {
+    const projectRepository = new ProjectsRepository();
 
-  const projectRepository = new ProjectsRepository();
-
-  const project = projectRepository.create({
-    name,
-    price,
-    user_id,
-  });
-
-  return project;
+    return projectRepository.findById(options.id);
+  }
 }

@@ -1,11 +1,10 @@
 import { getRepository, Repository, Like } from 'typeorm';
 
-import IProjectRepository, {
-  IFindByName,
-} from '@modules/projects/repositories/IProjectRepository';
+import IProjectRepository from '@modules/projects/repositories/IProjectRepository';
 import ICreateProjectDTO from '@modules/projects/dtos/ICreateProjectDTO';
 
 import User from '@modules/users/infra/typeorm/entities/User';
+import ProjectInputByName from '@modules/projects/graphql/input/ProjectInputByName';
 import Project from '../entities/Project';
 
 export default class ProjectsRepository implements IProjectRepository {
@@ -15,31 +14,31 @@ export default class ProjectsRepository implements IProjectRepository {
     this.ormRepository = getRepository(Project);
   }
 
-  public async findAll(): Promise<Project[]> {
-    return this.ormRepository.find({
-      take: 5,
-      relations: ['user'],
-    });
-  }
-
-  public async findById(id: number): Promise<Project | undefined> {
-    const project = await this.ormRepository.findOne({ where: { id } });
-
-    return project;
-  }
-
-  public async findByName({
-    name,
-    limit,
-    page,
-  }: IFindByName): Promise<Project[]> {
-    const project = await this.ormRepository.find({
+  public async findAll({
+    name = '',
+    limit = 10,
+    page = 0,
+  }: ProjectInputByName): Promise<Project[]> {
+    const projects = await this.ormRepository.find({
       where: {
         name: Like(`%${name}%`),
       },
       take: limit,
       skip: page,
+      relations: ['user'],
     });
+
+    return projects;
+  }
+
+  public async findById(id: number): Promise<Project> {
+    const project = await this.ormRepository.findOne(id, {
+      relations: ['user'],
+    });
+
+    if (!project) {
+      throw new Error('Project not found.');
+    }
 
     return project;
   }
@@ -52,14 +51,14 @@ export default class ProjectsRepository implements IProjectRepository {
     const existProject = await this.ormRepository.findOne({ where: { name } });
 
     if (existProject) {
-      throw new Error('Project already exists');
+      throw new Error('Project already exists.');
     }
 
     const usersRepository = getRepository(User);
     const user = await usersRepository.findOne({ where: { id } });
 
     if (!user) {
-      throw new Error('User not found');
+      throw new Error('User not found.');
     }
 
     const project = this.ormRepository.create({

@@ -11,6 +11,9 @@
   "migrations": [
     "src/shared/infra/typeorm/migrations/*.ts"
   ],
+  "synchronize": true,
+  "logging": false,
+  "dropSchema": true,
   "cli": {
     "migrationsDir": "src/shared/infra/typeorm/migrations",
     "entitiesDir": "src/modules/**/infra/typeorm/entities"

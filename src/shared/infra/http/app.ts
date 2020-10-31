@@ -1,15 +1,30 @@
 import 'reflect-metadata';
 import 'dotenv/config';
 
-import { ApolloServer } from 'apollo-server';
+import express from 'express';
+import 'express-async-errors';
 
-import '@shared/infra/typeorm';
+import { createConnection } from 'typeorm';
 
-import schema from './schema';
+import { ApolloServer } from 'apollo-server-express';
+import { buildSchema } from 'type-graphql';
 
-const server = new ApolloServer({
-  schema,
-  playground: process.env.NODE_ENV === 'development',
-});
+import UserResolver from '@modules/users/graphql/resolver';
+import ProjectResolver from '@modules/projects/graphql/resolver';
 
-export default server;
+const app = express();
+
+(async () => {
+  await createConnection();
+
+  const apolloServer = new ApolloServer({
+    schema: await buildSchema({
+      resolvers: [UserResolver, ProjectResolver],
+    }),
+    context: ({ req, res }) => ({ req, res }),
+  });
+
+  apolloServer.applyMiddleware({ app, cors: false });
+})();
+
+export default app;

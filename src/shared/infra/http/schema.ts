@@ -1,19 +1,12 @@
-import { GraphQLObjectType, GraphQLSchema } from 'graphql';
+import { buildSchema } from 'type-graphql';
 
-import rootMutation from './root/mutation';
-import rootQuery from './root/query';
+import UserResolver from '@modules/users/graphql/resolver';
+import ProjectResolver from '@modules/projects/graphql/resolver';
 
-export default new GraphQLSchema({
-  query: new GraphQLObjectType({
-    name: 'RootQueryType',
-    fields: {
-      ...rootQuery,
+export const createSchema = () =>
+  buildSchema({
+    resolvers: [UserResolver, ProjectResolver],
+    authChecker: ({ context: { req } }) => {
+      return !!req.session.userId;
     },
-  }),
-  mutation: new GraphQLObjectType({
-    name: 'RootMutationType',
-    fields: {
-      ...rootMutation,
-    },
-  }),
-});
+  });

@@ -1,5 +1,5 @@
 import app from './app';
 
-app.listen({ port: 4000 }).then(({ url }) => {
-  console.log(`🚀 Server is running ${url}`);
+app.listen(4000, () => {
+  console.log(`🚀 Server is running http://localhost:4000/graphql`);
 });

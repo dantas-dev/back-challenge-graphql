@@ -61,7 +61,7 @@ $ yarn dev
 # Well done, project is started!
 
 # Access playground url
-🚀 Server is running http://localhost:4000/
+🚀 Server is running http://localhost:4000/graphql
 ```
 
 ---
@@ -80,7 +80,14 @@ Technologies that I used to develop this application
 
 ## :wrench: Improvements
 
-`Eslint`, `prettier` and `editorconfig` have been added, so that it has a ready-made style, as well as for other developers that do not have `VSCode`, to inherit these same settings.
+- [x] Separating responsibility for each domain `projects` and `users`, applying DDD:
+  - [x] Add layer `graphql`;
+  - [x] Add layer`infra`;
+  - [x] Adds layer `repositories`;
+
+- [x] Adds shareable layer `shared`;
+
+- [x] `Eslint`, `prettier` and `editorconfig` have been added, so that it has a ready-made style, as well as for other developers that do not have `VSCode`, to inherit these same settings;
 
 ---
 
