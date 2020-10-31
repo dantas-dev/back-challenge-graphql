@@ -72,6 +72,7 @@ $ yarn dev
 Technologies that I used to develop this application
 
 - [Apollo Server](https://www.apollographql.com/docs/apollo-server/)
+- [Express.js](https://expressjs.com/)
 - [GraphQL](https://graphql.org/)
 - [Node.js](https://nodejs.org/en/)
 - [TypeORM](https://typeorm.io/#/)
