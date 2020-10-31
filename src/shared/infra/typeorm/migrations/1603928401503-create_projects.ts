@@ -1,6 +1,7 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export class createProjects1603928401503 implements MigrationInterface {
+//  deepcode ignore class-name: <comment the reason here>
+export default class createProjects1603928401503 implements MigrationInterface {
   async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
