@@ -1,7 +1,7 @@
 {
   "type": "postgres",
   "port": 5432,
-  "host": "192.168.99.100",
+  "host": "localhost",
   "username": "graphql",
   "password": "back-end",
   "database": "back_end_graphql",
