@@ -1,8 +1,12 @@
 <h1 align="center"> GRAPHQL - Challenge </h1>
 
-This application created to register users and projects with Graphql to help the construction.
+<p align="center">This application created to register users and projects with Graphql to help the construction. </p>
 
-<h2 align="center"> Instructions :book:</h2>
+---
+
+<h2 align="center"> :book: Instructions </h2>
+
+---
 
 ### :bookmark_tabs: Setup Instructions
 
