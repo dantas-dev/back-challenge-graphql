@@ -1,8 +1,10 @@
 <h1 align="center"> GRAPHQL - Challenge </h1>
 
+This application created to register users and projects with Graphql to help the construction.
+
 <h2 align="center"> Instructions :book:</h2>
 
-### Setup Instructions
+### :bookmark_tabs: Setup Instructions
 
 Run the commands below:
 
@@ -22,7 +24,9 @@ $ yarn dev
 http://localhost:3000
 ```
 
-### Technologies
+---
+
+### :computer: Technologies
 
 Technologies used to build this application.
 
@@ -34,17 +38,23 @@ Technologies used to build this application.
 - Postgres
 - uuid
 
-### Improviments
+---
+
+### :art: Improviments
 
 - [x] `Eslint`, `prettier` and `editorconfig` have been include to config for help the development with the same settings and improve the quality of code.
 - [x] Include new features to filter and delete: `user` and `project`
 
-### Future Features
+---
+
+### :hammer_and_wrench: Future Features
 
 - [ ] Include Middleware Authentication;
 - [ ] New Features to update informations of user;
 - [ ] New Features to update informations of project;
 - [ ] Apply DDD and SOLID to separate responsibilities;
 - [ ] Deploy App (ex. Heroku).
+
+---
 
 Made by **Jefferson da Silva** :v:
