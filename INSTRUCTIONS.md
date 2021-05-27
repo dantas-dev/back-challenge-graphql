@@ -1,108 +1,50 @@
-## GRAPHQL - Challenge
+<h1 align="center"> GRAPHQL - Challenge </h1>
 
-### Technologies used
+<h2 align="center"> Instructions :book:</h2>
 
-[ ] - Node with TypeScript
-[ ] - TypeORM
-[ ] - GraphQL
-[ ] - Type-Graphql
-[ ] - ApoloServer
-[ ] - Postgres or MySQL
-[ ] - uuid
+### Setup Instructions
 
-### Setup Project
+Run the commands below:
 
-Please include a `INSTRUCTIONS.md`:
+```bash
+# To Install all dependencies
+$ yarn
 
-- Setup instructions
-- How did you decide which technologies to use as part of your solution
-- Are there any improvements you could make to your submission
-- What would you do differently if you were allocated more time
+# To run the migrations on database
+$ yarn typeorm migration:run
 
-## Details
+# To finish, run the api service
+$ yarn dev
 
-- Create a Node Graphql API based on the queries and mutations below.
-- Feel free to choose the way that you will pass the input data (queries and mutations)
-- Use your creativity to improve what you want.
+# Great, the project is running!
 
-### Queries
-
-#### Projects: List all projects
-
-<details><summary>Query Details</summary>
-
-<p>
-  
-```graphql
-query projects {
-  id
-  name
-  price
-  user {
-    id
-    name
-    email
-  }
-}
+# Access API on
+http://localhost:3000
 ```
 
-</p>
-</details>
+### Technologies
 
-#### Users: List all users
+Technologies used to build this application.
 
-<details><summary>Query Details</summary>
+- Node with TypeScript
+- TypeORM
+- GraphQL
+- Type-Graphql
+- ApoloServer
+- Postgres
+- uuid
 
-<p>
-  
-```graphql
-query users {
-  id
-  name
-  email
-}
-```
+### Improviments
 
-</p>
-</details>
+- [x] `Eslint`, `prettier` and `editorconfig` have been include to config for help the development with the same settings and improve the quality of code.
+- [x] Include new features to filter and delete: `user` and `project`
 
-### Mutations
+### Future Features
 
-#### CreateUser: create a user
+- [ ] Include Middleware Authentication;
+- [ ] New Features to update informations of user;
+- [ ] New Features to update informations of project;
+- [ ] Apply DDD and SOLID to separate responsibilities;
+- [ ] Deploy App (ex. Heroku).
 
-<details><summary>Mutation Details</summary>
-
-<p>
-  
-```graphql
-mutation createUser {
-  id
-  name
-  email
-}
-```
-
-</p>
-</details>
-
-#### CreateProject: create a project
-
-<details><summary>Mutation Details</summary>
-
-<p>
-  
-```graphql
-mutation createProject {
-  id
-  name
-  price
-  user {
-    id
-    name
-    email
-  }
-}
-```
-
-</p>
-</details>
+Made by **Jefferson da Silva** :v:
