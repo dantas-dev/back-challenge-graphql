@@ -10,6 +10,10 @@ class UsersRepositoryPG implements IUsersRepository {
   constructor() {
     this.repository = getRepository(User);
   }
+  async findByEmail(email: string): Promise<User> {
+    const user = await this.repository.findOne({ email });
+    return user;
+  }
 
   async create({ name, email }: ICreateUserDTO): Promise<User> {
     const user = this.repository.create({ name, email });
