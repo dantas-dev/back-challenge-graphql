@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { container } from "tsyringe";
-import { Arg, Mutation, Query, Resolver } from "type-graphql";
+import { Arg, Args, Mutation, Query, Resolver } from "type-graphql";
 
 import { CreateUserInput } from "../schemas/createUserInput";
+import { ListUsersArgs } from "../schemas/listUsersArgs";
 import { User } from "../schemas/user";
 import { CreateUserUseCase } from "../useCases/CreateUserUseCase";
 import { ListUsersUseCase } from "../useCases/ListUsersUseCase";
@@ -10,11 +11,21 @@ import { ListUsersUseCase } from "../useCases/ListUsersUseCase";
 @Resolver((of) => User)
 class UserResolver {
   @Query((returns) => [User], { nullable: true })
-  async listUsers(): Promise<User[]> {
+  async listUsers(
+    @Args() { name, email, startIndex, endIndex }: ListUsersArgs
+  ): Promise<User[]> {
     const listUsersUseCase = container.resolve(ListUsersUseCase);
-    const users = await listUsersUseCase.execute();
+    let users = await listUsersUseCase.execute();
 
-    return users;
+    if (name) {
+      users = users.filter((user) => user.name === name);
+    }
+
+    if (email) {
+      users = users.filter((user) => user.email === email);
+    }
+
+    return users.slice(startIndex, endIndex);
   }
 
   @Mutation((returns) => User)

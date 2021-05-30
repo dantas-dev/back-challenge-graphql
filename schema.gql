@@ -28,7 +28,7 @@ type Project {
 
 type Query {
   listProjects(name: String, price: Int, skip: Int = 0, take: Int = 25): [Project!]!
-  listUsers: [User!]
+  listUsers(email: String, name: String, skip: Int = 0, take: Int = 25): [User!]
 }
 
 type User {
