@@ -16,6 +16,9 @@ class Project {
 
   @Field()
   user: User;
+
+  @Field()
+  createdAt: Date;
 }
 
 export { Project };
