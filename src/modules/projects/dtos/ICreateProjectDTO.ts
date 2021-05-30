@@ -2,7 +2,7 @@ import { User } from "../../user/entities/User";
 
 interface ICreateProjectDTO {
   name: string;
-  price: string;
+  price: number;
   user: User;
 }
 
