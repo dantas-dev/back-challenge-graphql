@@ -5,6 +5,7 @@ import express from "express";
 import { buildSchema } from "type-graphql";
 
 import initializeDB from "./database";
+import { ProjectsResolver } from "./modules/projects/resolvers/projectsResolver";
 import { UserResolver } from "./modules/user/resolvers/usersResolvers";
 
 const app = express();
@@ -12,7 +13,7 @@ const app = express();
 async function main() {
   await initializeDB();
   const schema = await buildSchema({
-    resolvers: [UserResolver],
+    resolvers: [UserResolver, ProjectsResolver],
     emitSchemaFile: true,
   });
 

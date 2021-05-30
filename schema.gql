@@ -3,16 +3,31 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+input CreateProjectInput {
+  name: String!
+  price: Float!
+  userId: String!
+}
+
 input CreateUserInput {
   email: String!
   name: String!
 }
 
 type Mutation {
+  createProject(ProjectInput: CreateProjectInput!): Project!
   createUser(UserInput: CreateUserInput!): User!
 }
 
+type Project {
+  id: String!
+  name: String!
+  price: Float!
+  user: User!
+}
+
 type Query {
+  listProjects: [Project!]
   listUsers: [User!]
 }
 
