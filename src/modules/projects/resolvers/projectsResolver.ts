@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { title } from "process";
 import { container } from "tsyringe";
 import { Arg, Args, Mutation, Query, Resolver } from "type-graphql";
 
