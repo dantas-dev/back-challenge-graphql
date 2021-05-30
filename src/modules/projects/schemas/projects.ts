@@ -1,4 +1,5 @@
-import { Field, ObjectType } from "type-graphql";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { Field, Float, ObjectType } from "type-graphql";
 
 import { User } from "../../user/schemas/user";
 

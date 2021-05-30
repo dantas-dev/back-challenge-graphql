@@ -1,21 +1,33 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { title } from "process";
 import { container } from "tsyringe";
-import { Arg, Mutation, Query, Resolver } from "type-graphql";
+import { Arg, Args, Mutation, Query, Resolver } from "type-graphql";
 
 import { GetUserByIdUseCase } from "../../user/useCases/GetUserByIdUseCase";
 import { CreateProjectInput } from "../schemas/createProjectInput";
+import { ListProjectsArgs } from "../schemas/listProjectsArgs";
 import { Project } from "../schemas/projects";
 import { CreateProjectUseCase } from "../useCases/CreateProjectUseCase";
 import { ListProjectsUseCase } from "../useCases/ListProjectsUseCase";
 
 @Resolver((of) => Project)
 class ProjectsResolver {
-  @Query((returns) => [Project], { nullable: true })
-  async listProjects(): Promise<Project[]> {
+  @Query((returns) => [Project])
+  async listProjects(
+    @Args() { name, price, startIndex, endIndex }: ListProjectsArgs
+  ): Promise<Project[]> {
     const listProjectsUseCase = container.resolve(ListProjectsUseCase);
-    const projects = await listProjectsUseCase.execute();
+    let projects = await listProjectsUseCase.execute();
 
-    return projects;
+    if (name) {
+      projects = projects.filter((project) => project.name.includes(name));
+    }
+
+    if (price) {
+      projects = projects.filter((project) => project.price === price);
+    }
+
+    return projects.slice(startIndex, endIndex);
   }
 
   @Mutation((returns) => Project)

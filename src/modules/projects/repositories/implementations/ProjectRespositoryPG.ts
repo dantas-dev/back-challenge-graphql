@@ -12,7 +12,6 @@ class ProjectRepositoryPG implements IProjectRepository {
   }
 
   async list(): Promise<Project[]> {
-    // const projects = await this.repository.find({ relations: ["users"] });
     const projects = await this.repository.find({ relations: ["user"] });
     return projects;
   }
