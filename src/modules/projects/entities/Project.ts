@@ -1,4 +1,10 @@
-import { Column, Entity, ManyToOne, PrimaryColumn } from "typeorm";
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  ManyToOne,
+  PrimaryColumn,
+} from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
 import { User } from "../../user/entities/User";
@@ -16,6 +22,9 @@ class Project {
 
   @ManyToOne(() => User)
   user: User;
+
+  @CreateDateColumn({ name: "created_at" })
+  createdAt: Date;
 
   constructor() {
     if (!this.id) {
