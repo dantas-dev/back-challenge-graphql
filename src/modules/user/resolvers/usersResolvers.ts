@@ -2,10 +2,10 @@
 import { container } from "tsyringe";
 import { Arg, Mutation, Query, Resolver } from "type-graphql";
 
-import { CreateUserUseCase } from "../modules/user/useCases/CreateUserUseCase";
-import { ListUsersUseCase } from "../modules/user/useCases/ListUsersUseCase";
 import { CreateUserInput } from "../schemas/createUserInput";
 import { User } from "../schemas/user";
+import { CreateUserUseCase } from "../useCases/CreateUserUseCase";
+import { ListUsersUseCase } from "../useCases/ListUsersUseCase";
 
 @Resolver((of) => User)
 class UserResolver {

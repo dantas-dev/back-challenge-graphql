@@ -5,7 +5,7 @@ import express from "express";
 import { buildSchema } from "type-graphql";
 
 import initializeDB from "./database";
-import { UserResolver } from "./resolvers/usersResolvers";
+import { UserResolver } from "./modules/user/resolvers/usersResolvers";
 
 const app = express();
 
