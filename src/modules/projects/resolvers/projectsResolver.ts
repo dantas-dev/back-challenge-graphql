@@ -31,13 +31,18 @@ class ProjectsResolver {
 
   @Mutation((returns) => Project)
   async createProject(
-    @Arg("ProjectInput") { name, price, userId }: CreateProjectInput
+    @Arg("ProjectInput") { name, price, userId, deadline }: CreateProjectInput
   ): Promise<Project> {
     const getUserByIdUseCase = container.resolve(GetUserByIdUseCase);
     const user = await getUserByIdUseCase.execute(userId);
 
     const createProjectUseCase = container.resolve(CreateProjectUseCase);
-    const project = await createProjectUseCase.execute({ name, price, user });
+    const project = await createProjectUseCase.execute({
+      name,
+      price,
+      deadline,
+      user,
+    });
 
     return project;
   }

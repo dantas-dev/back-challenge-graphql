@@ -11,7 +11,12 @@ class CreateProjectUseCase {
     private projectsRepository: IProjectRepository
   ) {}
 
-  async execute({ name, price, user }: ICreateProjectDTO): Promise<Project> {
+  async execute({
+    name,
+    price,
+    deadline,
+    user,
+  }: ICreateProjectDTO): Promise<Project> {
     const projectNameAlreadyInUse = await this.projectsRepository.findByUser(
       name,
       user
@@ -21,7 +26,12 @@ class CreateProjectUseCase {
       throw new Error("Name already in use by this user!");
     }
 
-    const project = await this.projectsRepository.create({ name, price, user });
+    const project = await this.projectsRepository.create({
+      name,
+      price,
+      deadline,
+      user,
+    });
     return project;
   }
 }

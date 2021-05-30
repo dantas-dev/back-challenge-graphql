@@ -18,6 +18,9 @@ class Project {
   user: User;
 
   @Field()
+  deadline: Date;
+
+  @Field()
   createdAt: Date;
 }
 

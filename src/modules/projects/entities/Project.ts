@@ -23,6 +23,9 @@ class Project {
   @ManyToOne(() => User)
   user: User;
 
+  @Column()
+  deadline: Date;
+
   @CreateDateColumn({ name: "created_at" })
   createdAt: Date;
 

@@ -14,7 +14,6 @@ class ProjectRepositoryPG implements IProjectRepository {
 
   async findByUser(name: string, user: User): Promise<Project> {
     const project = await this.repository.findOne({ user, name });
-    console.log(project);
 
     return project;
   }
@@ -24,9 +23,14 @@ class ProjectRepositoryPG implements IProjectRepository {
     return projects;
   }
 
-  async create({ name, price, user }: ICreateProjectDTO): Promise<Project> {
+  async create({
+    name,
+    price,
+    user,
+    deadline,
+  }: ICreateProjectDTO): Promise<Project> {
     const project = new Project();
-    Object.assign(project, { name, price, user });
+    Object.assign(project, { name, price, deadline, user });
     await this.repository.save(project);
 
     return project;

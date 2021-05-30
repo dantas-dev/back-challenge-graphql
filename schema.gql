@@ -4,6 +4,7 @@
 # -----------------------------------------------
 
 input CreateProjectInput {
+  deadline: DateTime!
   name: String!
   price: Float!
   userId: String!
@@ -14,12 +15,19 @@ input CreateUserInput {
   name: String!
 }
 
+"""
+The javascript `Date` as string. Type represents date and time as the ISO Date string.
+"""
+scalar DateTime
+
 type Mutation {
   createProject(ProjectInput: CreateProjectInput!): Project!
   createUser(UserInput: CreateUserInput!): User!
 }
 
 type Project {
+  createdAt: DateTime!
+  deadline: DateTime!
   id: String!
   name: String!
   price: Float!

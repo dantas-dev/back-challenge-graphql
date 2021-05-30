@@ -12,6 +12,9 @@ class CreateProjectInput implements Partial<Project> {
 
   @Field()
   userId: string;
+
+  @Field()
+  deadline: Date;
 }
 
 export { CreateProjectInput };
