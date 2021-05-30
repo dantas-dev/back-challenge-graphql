@@ -16,6 +16,9 @@ class ListUsersArgs {
   @Field({ nullable: true })
   name?: string;
 
+  @Field({ nullable: true })
+  email?: string;
+
   get startIndex(): number {
     return this.skip;
   }
