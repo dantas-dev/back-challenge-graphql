@@ -21,11 +21,11 @@ const typeDefs = gql`
     user(id: ID!): User    
   }
   type Mutation {
-    createUser(name: String, email:String!): User!
-    updateUser(id: ID!, name: String!, email:String!): [Int!]!
+    createUser(name: String!, email:String!): User!
+    updateUser(id: ID!, name: String!, email:String!): User!
     deleteUser(id: ID!): Int!
     createProject(name: String!, price:Float!, userId: ID!): Project!
-    updateProject(id: ID!, name: String!, price:Float!): [Int!]!
+    updateProject(id: ID!, name: String!, price:Float!): Project!
     deleteProject(id: ID!): Int! 
   }
 `;

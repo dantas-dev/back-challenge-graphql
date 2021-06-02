@@ -15,16 +15,15 @@ const resolvers = {
     user: (parent, { id }, { db }, info) => db.User.findByPk(id)
   },
   Mutation: {
-    createUser: (parent, { name, price, userId }, { db }, info) =>
+    createUser: (parent, { name, email }, { db }, info) =>
       db.User.create({
         name: name,
-        price: price,
-        userId: userId
+        email: email
       }),
-    updateUser: (parent, { id, name, price }, { db }, info) =>
+    updateUser: (parent, { id, name, email }, { db }, info) =>
       db.User.update({
         name: name,
-        price: price
+        email: email
       },
         {
           where: {
