@@ -38,6 +38,7 @@
   },
   "scripts": {
     "db:migrate": "cd src/db && npx sequelize db:migrate",
+    "db:seed": "cd src/db && npx sequelize db:seed:all",
     "start": "node dist/server.js",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/server.ts",
