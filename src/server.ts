@@ -8,5 +8,6 @@ import typeDefs from '@schemas/index';
 import resolvers from '@resolvers/index';
 import db from '@db-models/index';
 
-const server = new ApolloServer({ typeDefs, resolvers, context: { db }, playground: {endpoint: "/graphql"} });
+const server = new ApolloServer({ typeDefs, resolvers, context: async ({req}) => ({ db, req }), playground: {endpoint: "/graphql"} });
 server.listen(process.env.SRV_PORT).then(({ url }) => console.log(`Server started at ${url}`));
+

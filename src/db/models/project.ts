@@ -6,8 +6,7 @@ interface ProjectAttributes {
   userId: number
 }
 
-
-module.exports = (sequelize:any, dataTypes:any) => {
+function Project(sequelize:any, dataTypes:any) {
   class Project extends Model<ProjectAttributes> implements ProjectAttributes {
     /**
      * Helper method for defining associations.
@@ -29,3 +28,5 @@ module.exports = (sequelize:any, dataTypes:any) => {
   return Project;
 };
 
+module.exports = Project;
+export default Project;
