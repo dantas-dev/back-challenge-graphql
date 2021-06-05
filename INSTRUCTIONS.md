@@ -22,7 +22,7 @@ Criei uma API GraphQL com SpringBoot usando persistência de dados com o framewo
 - What would you do differently if you were allocated more time
 
 Com relação ao código implementado nada. Ele está limpo e fácil de manutenir e tem capacidade de escalar para uma aplicação maior sem nenhum problema (implementing the above improvements, of course).
-Faria, também, o Front-End challenge em Angular 11 ou Dart/Fluter. semelhante ao criado no linck abaixo.
+Faria, também, o Front-End challenge em Angular 11 ou Dart/Fluter. Semelhante ao criado no linck abaixo.
 
 https://os.alvesjosenildo.com
 
