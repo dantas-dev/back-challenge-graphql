@@ -16,6 +16,7 @@ Basicamente por afinidade e/ou facilidade de desenvolvimento.
 Criei uma API GraphQL com SpringBoot usando persistência de dados com o framework JPA. Este seria o resumo do resumo do que foi criado.
 
 - Are there any improvements you could make to your submission
+
   Implementaria as seguintes melhorias: aumentaria a abrangência dos testes unitários; faria tratamento de exceções centralizada e personalizadas; implementaria cache visando melhor performance.
 
 - What would you do differently if you were allocated more time
