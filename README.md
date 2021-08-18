@@ -106,4 +106,4 @@ mutation createProject {
 ## Desirable
 - Apollo
 - Sequelize with MySQL
-- Clean Architecture, Design Patterns and SOLID
+-Clean Architecture, Design Patttrns and SOLID
