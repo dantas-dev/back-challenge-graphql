@@ -1,0 +1,21 @@
+[
+  {
+        "type": "mysql",
+	"host": "localhost",
+        "port": 3306,
+        "username": "root",
+        "password": "12345",
+        "logging": true,
+        "synchronize": false,
+        "database": "GraphqlCRUD",
+        "entities": [
+                "./src/modules/**/infra/typeorm/entities/*.ts"
+        ],
+        "migrations": [
+                "./src/shared/infra/typeorm/migrations/*.ts"
+        ],
+        "cli": {
+                "migrationsDir": "./shared/shared/infra/typeorm/migrations"
+        }
+    }
+]
