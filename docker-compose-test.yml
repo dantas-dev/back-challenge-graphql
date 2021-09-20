@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  db-test:
+    container_name: db-test
+    image: mysql/mysql-server:8.0.13
+    env_file: ./.env.test
+    environment:
+      - MYSQL_USER=$MYSQL_USERNAME
+      - MYSQL_ROOT_PASSWORD=$MYSQL_PASSWORD
+      - MYSQL_DATABASE=$MYSQL_DATABASE
+    ports:
+      - "3306:3306"

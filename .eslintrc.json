@@ -1,0 +1,20 @@
+{
+  "extends": "standard-with-typescript",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/comma-spacing": "off",
+    "@typescript-eslint/return-await": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "import/export": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "node/no-path-concat": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/no-invalid-void-type": "off",
+    "@typescript-eslint/prefer-optional-chain": "off"
+  }
+}

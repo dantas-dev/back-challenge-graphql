@@ -1,0 +1,10 @@
+.env
+node_modules
+.idea
+dist
+!.vscode/launch.json
+.vscode
+.DS_Store
+coverage
+package-lock.json
+globalConfig.json
