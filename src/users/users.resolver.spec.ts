@@ -23,7 +23,10 @@ describe('UsersResolver', () => {
     });
 
     it('Deve retornar um novo User válido', () => {
-      expect(resolver.create()).toEqual(TestUtils.getAValidUser());
+      const input = TestUtils.getAValidCreateUserInput();
+      const result = TestUtils.getAValidUser();
+
+      expect(resolver.create(input)).toEqual(result);
     });
   });
 });
