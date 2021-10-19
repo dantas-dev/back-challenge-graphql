@@ -1,9 +1,11 @@
-import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
+import { Resolver, Mutation } from '@nestjs/graphql';
+import { CreateUserInput } from './dto/create-user.input';
+import { User } from './entities/user.entity';
 
 @Resolver('User')
 export class UsersResolver {
   @Mutation('createUser')
-  create() {
-    return 'Retorna um novo usuario salvo no banco de dados';
+  create(createUserInput: CreateUserInput): User {
+    return new User();
   }
 }
