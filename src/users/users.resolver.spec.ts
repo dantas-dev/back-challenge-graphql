@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { User } from './entities/user.entity';
+import { TestUtils } from '../utils/test.utils';
 import { UsersResolver } from './users.resolver';
 
 describe('UsersResolver', () => {
@@ -20,6 +20,10 @@ describe('UsersResolver', () => {
   describe('Create', () => {
     it('Deve ser definido', () => {
       expect(resolver.create).toBeDefined();
+    });
+
+    it('Deve retornar um novo User válido', () => {
+      expect(resolver.create()).toEqual(TestUtils.getAValidUser());
     });
   });
 });
