@@ -6,6 +6,9 @@ import { UsersModule } from './users/users.module';
 require('dotenv/config');
 @Module({
   imports: [
+    GraphQLModule.forRoot({
+      autoSchemaFile: 'schema.gql',
+    }),
     SequelizeModule.forRoot({
       dialect: 'mysql',
       host: process.env.DB_HOST,
