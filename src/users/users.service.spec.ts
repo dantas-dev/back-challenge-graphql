@@ -15,4 +15,10 @@ describe('UsersService', () => {
   it('Deve ser definido', () => {
     expect(service).toBeDefined();
   });
+
+  describe('Create', () => {
+    it('Deve ser definido', () => {
+      expect(service.create).toBeDefined();
+    });
+  });
 });
