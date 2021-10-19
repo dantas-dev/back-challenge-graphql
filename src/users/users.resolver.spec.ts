@@ -1,4 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { User } from './entities/user.entity';
 import { UsersResolver } from './users.resolver';
 
 describe('UsersResolver', () => {
@@ -14,5 +15,11 @@ describe('UsersResolver', () => {
 
   it('Deve ser definido', () => {
     expect(resolver).toBeDefined();
+  });
+
+  describe('Create', () => {
+    it('Deve ser definido', () => {
+      expect(resolver.create).toBeDefined();
+    });
   });
 });
