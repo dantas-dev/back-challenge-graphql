@@ -11,4 +11,8 @@ describe('UsersService', () => {
 
     service = module.get<UsersService>(UsersService);
   });
+
+  it('Deve ser definido', () => {
+    expect(service).toBeDefined();
+  });
 });
