@@ -4,6 +4,7 @@ import { GraphQLModule } from '@nestjs/graphql/dist/graphql.module';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { UsersModule } from './users/users.module';
 import { ProjectsModule } from './projects/projects.module';
+import { Project } from './projects/entities/project.entity';
 require('dotenv/config');
 @Module({
   imports: [
@@ -17,7 +18,7 @@ require('dotenv/config');
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
-      models: [User],
+      models: [User, Project],
       autoLoadModels: true,
       synchronize: true,
     }),
