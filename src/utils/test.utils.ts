@@ -1,13 +1,16 @@
 import { CreateUserInput } from '../users/dto/create-user.input';
 import { User } from '../users/entities/user.entity';
-
+const SequelizeMock = require('sequelize-mock');
+const DBConnectionMock = new SequelizeMock();
+const UserMock = DBConnectionMock.define('user', {
+  id: 1,
+  name: 'Luiz',
+  email: 'luiz',
+});
 export class TestUtils {
   static async getAValidUser(): Promise<User> {
-    return await User.create({
-      id: 1,
-      name: 'Uigor Marshall',
-      email: 'uigor@marshall.com',
-    });
+    const user = UserMock.create();
+    return user;
   }
 
   static getAValidCreateUserInput(): CreateUserInput {
