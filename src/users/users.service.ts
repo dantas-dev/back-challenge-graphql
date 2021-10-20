@@ -9,4 +9,8 @@ export class UsersService {
   create(createUserInput: CreateUserInput): Promise<User> {
     return this.usersRepository.create(createUserInput);
   }
+
+  findAll(): Promise<User[]> {
+    return this.usersRepository.findAll();
+  }
 }
