@@ -9,6 +9,7 @@ describe('UsersResolver', () => {
   let usersService: UsersService;
   const mockUsersRepository = {
     create: jest.fn(),
+    findAll: jest.fn(),
   };
 
   beforeEach(async () => {
@@ -49,6 +50,15 @@ describe('UsersResolver', () => {
   describe('FindAll', () => {
     it('Deve ser definido', () => {
       expect(resolver.findAll).toBeDefined();
+    });
+
+    it('Deve retornar uma lista de Users válidos', async () => {
+      const users = await TestUtils.getAValidListUser();
+
+      mockUsersRepository.findAll.mockReturnValue(users);
+      const result = resolver.findAll();
+
+      expect(result).toEqual(users);
     });
   });
 });
