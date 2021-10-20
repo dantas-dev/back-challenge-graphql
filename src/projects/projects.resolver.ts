@@ -13,7 +13,7 @@ export class ProjectsResolver {
     return null;
   }
   @Query(() => [Project], { name: 'projects' })
-  findAll(): Project[] {
-    return [];
+  findAll(): Promise<Project[]> {
+    return this.projectsService.findAll();
   }
 }
