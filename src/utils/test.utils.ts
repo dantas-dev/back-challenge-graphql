@@ -4,8 +4,8 @@ const SequelizeMock = require('sequelize-mock');
 const DBConnectionMock = new SequelizeMock();
 const UserMock = DBConnectionMock.define('user', {
   id: 1,
-  name: 'Luiz',
-  email: 'luiz',
+  name: 'Uigor Marshall',
+  email: 'uigor@marshall.com',
 });
 export class TestUtils {
   static async getAValidUser(): Promise<User> {
@@ -21,7 +21,9 @@ export class TestUtils {
   }
 
   static async getAValidListUser(): Promise<User[]> {
+    const userList: User[] = [];
     const user = await this.getAValidUser();
-    return [user];
+    userList.push(user);
+    return userList;
   }
 }
