@@ -19,7 +19,7 @@
 ##  (apollo-server, graphql, mysql, sequelize): 
 	busquei utilizar as ferramentas que estavam apontadas como desejáveis ou obrigatórias
 
-#Se mais tempo
+#  Se mais tempo
 
 	Adicionar comentários no código
 	Adicionar validações para responses das requisições
