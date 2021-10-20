@@ -7,6 +7,7 @@ import {
 } from 'sequelize-typescript';
 import { Field, ObjectType } from '@nestjs/graphql';
 import { User } from '../../users/entities/user.entity';
+
 @Table({
   modelName: 'projects',
 })
@@ -28,5 +29,6 @@ export class Project extends Model {
   userId: number;
 
   @BelongsTo(() => User)
+  @Field((type) => User)
   user: User;
 }
