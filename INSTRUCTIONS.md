@@ -24,4 +24,4 @@
 	Adicionar comentários no código
 	Adicionar validações para responses das requisições
 	Realizar testes
-	Aprofundar nos conceitos das tecnologias utilizadas
+	Aprofundar conceitos das tecnologias utilizadas
