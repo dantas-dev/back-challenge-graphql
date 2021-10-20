@@ -1,17 +1,21 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { TestUtils } from 'src/utils/test.utils';
 import { UsersRepository } from './repositories/users.repository';
 import { UsersService } from './users.service';
 
 describe('UsersService', () => {
   let service: UsersService;
-
+  const mockUsersRepository = {
+    create: jest.fn(),
+    findAll: jest.fn(),
+  };
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
         UsersService,
         {
           provide: UsersRepository,
-          useValue: {},
+          useValue: mockUsersRepository,
         },
       ],
     }).compile();
@@ -26,6 +30,12 @@ describe('UsersService', () => {
   describe('Create', () => {
     it('Deve ser definido', () => {
       expect(service.create).toBeDefined();
+    });
+  });
+
+  describe('FindAll', () => {
+    it('Deve ser definido', () => {
+      expect(service.findAll).toBeDefined();
     });
   });
 });
