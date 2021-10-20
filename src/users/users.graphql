@@ -1,24 +1,14 @@
 type User {
-  # Example field (placeholder)
-  exampleField: Int
+  id: Int
+  name: String,
+  email: String,
 }
 
 input CreateUserInput {
-  # Example field (placeholder)
-  exampleField: Int
-}
-
-input UpdateUserInput {
-  id: Int!
-}
-
-type Query {
-  users: [User]!
-  user(id: Int!): User
+  name: String,
+  email: String,
 }
 
 type Mutation {
   createUser(createUserInput: CreateUserInput!): User!
-  updateUser(updateUserInput: UpdateUserInput!): User!
-  removeUser(id: Int!): User
 }
