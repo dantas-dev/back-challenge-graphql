@@ -3,6 +3,7 @@ import { User } from './users/entities/user.entity';
 import { GraphQLModule } from '@nestjs/graphql/dist/graphql.module';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { UsersModule } from './users/users.module';
+import { ProjectsModule } from './projects/projects.module';
 require('dotenv/config');
 @Module({
   imports: [
@@ -21,6 +22,7 @@ require('dotenv/config');
       synchronize: true,
     }),
     UsersModule,
+    ProjectsModule,
   ],
   controllers: [],
   providers: [],
