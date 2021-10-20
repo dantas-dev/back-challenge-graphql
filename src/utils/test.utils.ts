@@ -38,4 +38,10 @@ export class TestUtils {
   static async getAValidProject(): Promise<Project> {
     return ProjectMock.create();
   }
+  static async getAValidListProjects(): Promise<Project[]> {
+    const projectList: Project[] = [];
+    const project = await this.getAValidProject();
+    projectList.push(project);
+    return projectList;
+  }
 }
