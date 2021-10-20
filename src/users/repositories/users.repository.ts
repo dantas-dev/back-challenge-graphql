@@ -11,4 +11,8 @@ export class UsersRepository {
   async create(createUserInput: CreateUserInput): Promise<User> {
     return this.userModel.create(createUserInput);
   }
+
+  findAll(): Promise<User[]> {
+    return this.userModel.findAll();
+  }
 }
