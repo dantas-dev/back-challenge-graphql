@@ -15,9 +15,9 @@
 #  Tecnologias
 
 ##  JavaScrip: 
-	liguagem simples e performatica para desenvolvimento de projetos
+	linguagem simples e performática para desenvolvimento de projetos
 ##  (apollo-server, graphql, mysql, sequelize): 
-	busquei utilizar as ferramentas que estavam apontadas como desejaveis ou obrigatórias
+	busquei utilizar as ferramentas que estavam apontadas como desejáveis ou obrigatórias
 
 #Se mais tempo
 	Adicionar comentários no código
