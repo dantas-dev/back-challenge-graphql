@@ -15,4 +15,10 @@ describe('ProjectsService', () => {
   it('Deve ser definido', () => {
     expect(service).toBeDefined();
   });
+
+  describe('FindAll', () => {
+    it('Deve ser definido', () => {
+      expect(service.findAll).toBeDefined();
+    });
+  });
 });
