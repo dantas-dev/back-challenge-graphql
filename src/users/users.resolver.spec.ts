@@ -45,4 +45,10 @@ describe('UsersResolver', () => {
       expect(result).toEqual(user);
     });
   });
+
+  describe('FindAll', () => {
+    it('Deve ser definido', () => {
+      expect(resolver.findAll).toBeDefined();
+    });
+  });
 });
