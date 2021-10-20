@@ -15,7 +15,9 @@ export class UsersResolver {
     return this.usersService.create(createUserInput);
   }
 
-  @Query(() => [User])
+  @Query(() => [User], {
+    name: 'users',
+  })
   async findAll(): Promise<User[]> {
     return await this.usersService.findAll();
   }
