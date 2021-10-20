@@ -12,7 +12,6 @@ describe('UsersResolver', () => {
   };
 
   beforeEach(async () => {
-   
     const module: TestingModule = await Test.createTestingModule({
       providers: [
         UsersResolver,
@@ -37,13 +36,13 @@ describe('UsersResolver', () => {
       expect(resolver.create).toBeDefined();
     });
 
-    it('Deve retornar um novo User válido', () => {
+    it('Deve retornar um novo User válido', async () => {
       const input = TestUtils.getAValidCreateUserInput();
-      const result = TestUtils.getAValidUser();
-      
-      mockUsersRepository.create.mockReturnValue(result);
+      const user = await TestUtils.getAValidUser();
 
-      expect(resolver.create(input)).toEqual(result);
+      mockUsersRepository.create.mockReturnValue(user);
+      const result = resolver.create(input);
+      expect(result).toEqual(user);
     });
   });
 });
