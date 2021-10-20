@@ -19,4 +19,9 @@ export class TestUtils {
     user.email = 'uigor@marshall.com';
     return user;
   }
+
+  static async getAValidListUser(): Promise<User[]> {
+    const user = await this.getAValidUser();
+    return [user];
+  }
 }
