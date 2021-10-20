@@ -22,4 +22,10 @@ describe('ProjectsResolver', () => {
       expect(resolver.findAll).toBeDefined();
     });
   });
+
+  describe('Create', () => {
+    it('Deve ser Definido', () => {
+      expect(resolver.create).toBeDefined();
+    });
+  });
 });
