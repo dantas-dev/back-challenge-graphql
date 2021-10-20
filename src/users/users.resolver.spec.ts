@@ -56,7 +56,7 @@ describe('UsersResolver', () => {
       const users = await TestUtils.getAValidListUser();
 
       mockUsersRepository.findAll.mockReturnValue(users);
-      const result = resolver.findAll();
+      const result = await resolver.findAll();
 
       expect(result).toEqual(users);
     });
