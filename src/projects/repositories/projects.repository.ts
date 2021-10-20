@@ -3,7 +3,7 @@ import { InjectModel } from '@nestjs/sequelize';
 import { CreateProjectInput } from '../dto/create-project.input';
 import { Project } from '../entities/project.entity';
 @Injectable()
-export class UsersRepository {
+export class ProjectsRepository {
   constructor(
     @InjectModel(Project)
     private projectModel: typeof Project,
