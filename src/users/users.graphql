@@ -9,6 +9,10 @@ input CreateUserInput {
   email: String,
 }
 
+type Query {
+  users: [User]!
+}
+
 type Mutation {
   createUser(createUserInput: CreateUserInput!): User!
 }
