@@ -16,4 +16,10 @@ describe('ProjectsResolver', () => {
   it('Deve ser Definido', () => {
     expect(resolver).toBeDefined();
   });
+
+  describe('FindAll', () => {
+    it('Deve ser Definido', () => {
+      expect(resolver.findAll).toBeDefined();
+    });
+  });
 });
