@@ -13,10 +13,5 @@ export default {
 
     Mutation: {
         createProject: (_, { data }) => Project.create(data),
-        // updateProject: (_, { id, data }) => {
-        //     Project.findByPk(id).map( project => {
-        //         project.update(data);
-        //     })
-        // } 
     },
 }

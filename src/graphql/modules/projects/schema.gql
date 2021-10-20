@@ -19,6 +19,4 @@ type Query {
 
 type Mutation {
     createProject(data: ProjectInput): Project!
-    # updateProject(id: ID!, data: ProjectInput): Project!
-    # deleteProject(id: ID!): Boolean
 }
