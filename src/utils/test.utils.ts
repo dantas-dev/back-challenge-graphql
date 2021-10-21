@@ -1,4 +1,4 @@
-import { Project } from 'src/projects/entities/project.entity';
+import { Project } from '../projects/entities/project.entity';
 import { CreateUserInput } from '../users/dto/create-user.input';
 import { User } from '../users/entities/user.entity';
 const SequelizeMock = require('sequelize-mock');
