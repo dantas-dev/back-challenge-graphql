@@ -7,7 +7,7 @@ import { ProjectsService } from './projects.service';
 export class ProjectsResolver {
   constructor(private readonly projectsService: ProjectsService) {}
   @Mutation(() => Project, {
-    name: 'createUser',
+    name: 'createProject',
   })
   create(@Args('createUserInput') createUserInput: CreateProjectInput) {
     return null;
