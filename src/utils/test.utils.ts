@@ -1,3 +1,4 @@
+import { CreateProjectInput } from '../projects/dto/create-project.input';
 import { Project } from '../projects/entities/project.entity';
 import { CreateUserInput } from '../users/dto/create-user.input';
 import { User } from '../users/entities/user.entity';
@@ -43,5 +44,12 @@ export class TestUtils {
     const project = await this.getAValidProject();
     projectList.push(project);
     return projectList;
+  }
+  static getAValidCreateProjectInput(): CreateProjectInput {
+    const input = new CreateProjectInput();
+    input.name = 'Project X';
+    input.email = 'Corporation K';
+    input.userId = 1;
+    return input;
   }
 }
