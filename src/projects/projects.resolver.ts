@@ -9,8 +9,8 @@ export class ProjectsResolver {
   @Mutation(() => Project, {
     name: 'createProject',
   })
-  create(@Args('createUserInput') createUserInput: CreateProjectInput) {
-    return this.projectsService.create(createUserInput);
+  async create(@Args('createUserInput') createUserInput: CreateProjectInput) {
+    return await this.projectsService.create(createUserInput);
   }
   @Query(() => [Project], { name: 'projects' })
   async findAll(): Promise<Project[]> {
