@@ -40,4 +40,11 @@ describe('ProjectsService', () => {
       expect(result).toEqual(projects);
     });
   });
+
+
+  describe('Create', () => {
+    it('Deve ser definido', () => {
+      expect(service.create).toBeDefined();
+    });
+  });
 });
