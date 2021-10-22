@@ -1,5 +1,6 @@
-import { Column, Model, Table } from 'sequelize-typescript';
+import { Column, Model, Table, HasMany } from 'sequelize-typescript';
 import { Field, ObjectType } from '@nestjs/graphql';
+import { Project } from '../../projects/entities/project.entity';
 @Table({
   modelName: 'users',
 })
@@ -15,4 +16,7 @@ export class User extends Model {
   @Column
   @Field()
   email: string;
+
+  @HasMany(() => Project)
+  projects: Project[];
 }

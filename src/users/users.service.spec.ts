@@ -1,5 +1,4 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { TestUtils } from 'src/utils/test.utils';
 import { UsersRepository } from './repositories/users.repository';
 import { UsersService } from './users.service';
 
