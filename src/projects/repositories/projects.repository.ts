@@ -10,7 +10,17 @@ export class ProjectsRepository {
     private projectModel: typeof Project,
   ) {}
   async create(createProjectInput: CreateProjectInput): Promise<Project> {
-    return this.projectModel.create(createProjectInput);
+    const project = await this.projectModel.create(createProjectInput);
+    return this.findOne(project.id);
+  }
+
+  async findOne(id: number): Promise<Project> {
+    return await this.projectModel.findByPk(id, {
+      include: {
+        model: User,
+        required: true,
+      },
+    });
   }
 
   findAll(): Promise<Project[]> {
