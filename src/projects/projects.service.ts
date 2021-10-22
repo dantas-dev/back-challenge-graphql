@@ -10,7 +10,8 @@ export class ProjectsService {
     return this.projectsRepository.findAll();
   }
 
-  create(createProjectInput: CreateProjectInput) {
-    return this.projectsRepository.create(createProjectInput);
+  async create(createProjectInput: CreateProjectInput) {
+    const result = await this.projectsRepository.create(createProjectInput);
+    return result;
   }
 }
