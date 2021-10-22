@@ -1,13 +1,25 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { TestUtils } from '../utils/test.utils';
 import { ProjectsResolver } from './projects.resolver';
 import { ProjectsService } from './projects.service';
+import { ProjectsRepository } from './repositories/projects.repository';
 
 describe('ProjectsResolver', () => {
   let resolver: ProjectsResolver;
-
+  const mockRepository = {
+    create: jest.fn(),
+    findAll: jest.fn(),
+  };
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [ProjectsResolver, ProjectsService],
+      providers: [
+        ProjectsResolver,
+        ProjectsService,
+        {
+          provide: ProjectsRepository,
+          useValue: mockRepository,
+        },
+      ],
     }).compile();
 
     resolver = module.get<ProjectsResolver>(ProjectsResolver);
@@ -26,6 +38,14 @@ describe('ProjectsResolver', () => {
   describe('Create', () => {
     it('Deve ser Definido', () => {
       expect(resolver.create).toBeDefined();
+    });
+
+    it('Deve criar um projeto e retornar o objeto criado mais o User vinculado', () => {
+      const project = TestUtils.getAValidProject();
+      const input = TestUtils.getAValidCreateProjectInput();
+      mockRepository.create.mockReturnValue(project);
+      const result = resolver.create(input);
+      expect(result).toBe(project);
     });
   });
 });
