@@ -10,7 +10,7 @@ export class ProjectsResolver {
     name: 'createProject',
   })
   create(@Args('createUserInput') createUserInput: CreateProjectInput) {
-    return null;
+    return this.projectsService.create(createUserInput);
   }
   @Query(() => [Project], { name: 'projects' })
   async findAll(): Promise<Project[]> {
