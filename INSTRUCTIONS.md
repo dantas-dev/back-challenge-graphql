@@ -60,3 +60,4 @@ Para o projeto decide usar um framework que fosse solido e bem documentado, visa
 - Definir um formato de resposta padrão.
 - Criação de um modelo de validações.
 - Definir melhor a modelagem dos relacionamentos.
+- adicionar uma pipeline para validar os testes/features
