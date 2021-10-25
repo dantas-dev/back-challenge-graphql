@@ -18,11 +18,13 @@
   * Faça uma copia do .env-example e renomeie para .env:
     * `cp .env-example .env`
   * em seguida edite os atributos do arquivo para seu bando banco de dados mysql:
+  ```bash
     DB_HOST=seuHost
     DB_PORT= suaPorta
     DB_USERNAME=seuUsuario
     DB_PASSWORD=suaSenha
     DB_DATABASE=seuDatabase
+  ```
   * para rodar as migrations use o comando abaixo:
   ```bash
   npx sequelize-cli db:migrate
