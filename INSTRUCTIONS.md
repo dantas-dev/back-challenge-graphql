@@ -2,42 +2,61 @@
 <a href="https://codeclimate.com/github/uigormarshall/back-challenge-graphql/maintainability"><img src="https://api.codeclimate.com/v1/badges/a1a4ebac5cb05a45735b/maintainability" /></a>
 <a href="https://codeclimate.com/github/uigormarshall/back-challenge-graphql/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a1a4ebac5cb05a45735b/test_coverage" /></a>
 
-
-# 🚀 Front-End challenge - Graphql API SpaceX
-
-## Sumário
-
-- [Screenshots](#screenshots)
-- [Instruções para setup](#instruções-para-setup)
-- [Tecnologias](#tecnologias)
-- [Possíveis melhorias](#possíveis-melhorias)
-
-## Screenshots
-![home-desktop](./screenshots/home-desktop.png)
-![mission-desktop](./screenshots/mission-desktop.png)
-![home-mobile](./screenshots/home-mobile.png)
-![mission-mobile](./screenshots/mission-mobile.png)
-
 ## Instruções para setup
 1. Clone o repositório:
-  * `git clone git@github.com:adryanrosa/front-challenge-spacex.git`
-  * Entre no diretório do repositório que você acabou de clonar:
-    * `cd front-challenge-spacex.git`
-  * Vá para a minha branch com:
-    * `git checkout JR-adryanrosa && git pull`
+  * `git clone git@github.com:uigormarshall/back-challenge-graphql.git`
+  * Entre no diretório do repositório:
+    * `cd back-challenge-graphql`
+  * Mude para a branch SR-uigor:
+    * `git checkout SR-uigor`
 
-2. Instale as dependências e inicialize o projeto
+2. Intalação de dependências
   * Instale as dependências:
     * `npm install`
-  * Inicialize o projeto:
-    * `npm start` (uma nova página deve abrir no seu navegador)
 
+3. Configuração do banco de dados
+  * Faça uma copia do .env-example e renomeie para .env:
+    * `cp .env-example .env`
+  * em seguida edite os atributos do arquivo para seu bando banco de dados mysql:
+    DB_HOST=seuHost
+    DB_PORT= suaPorta
+    DB_USERNAME=seuUsuario
+    DB_PASSWORD=suaSenha
+    DB_DATABASE=seuDatabase
+  * para rodar as migrations use o comando abaixo:
+  ```bash
+  npx sequelize-cli db:migrate
+  ```
+    
+4. Rodadando a aplicação
+```bash
+# desenvolvimento
+$ npm run start
+
+# modo watch
+$ npm run start:dev
+
+# produção
+$ npm run start:prod
+```
+
+4. Rodando os testes
+
+```bash
+# testes unitário
+$ npm run test
+
+# testes de cobertura
+$ npm run test:cov
+```
 ## Tecnologias
-- [React](https://reactjs.org/) - Livraria JavaScript com uma comunidade gigantesca e amplamente usada no mercado
-- [QraphQL Request](https://github.com/prisma-labs/graphql-request) - Considerada a mais madura, estável, e poderosa linguagem de extensão ao CSS do mundo
-- [Sass](https://sass-lang.com/) - Simples e leve cliente GraphQL
+-  [NestJs](https://nestjs.com/)
+-  [Sequelize](https://nestjs.com/)
+-  [JestJs](https://jestjs.io/pt-BR/)
+
+Para o projeto decide usar um framework que fosse solido e bem documentado, visando a facilidade de contratação, treinamento e até mesmo de conversão de desenvolvedores frontend para backend. 
 
 ## Possíveis melhorias
-- Achar uma solução melhorar para exibir imagens de diferentes tamanhos e aspect-ratios nos detalhes da missão
-- Enriquecer o layout
-- Testar resultados da API, que parecem ser um tanto inconsistentes (algumas missões não possuem imagens, links, etc...) e garantir que todas as telas funcionem apesar disso
+- Definir um formato de resposta padrão.
+- Criação de um modelo de validações.
+- Definir melhor a modelagem dos relacionamentos.
