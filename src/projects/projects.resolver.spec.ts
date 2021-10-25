@@ -40,11 +40,11 @@ describe('ProjectsResolver', () => {
       expect(resolver.create).toBeDefined();
     });
 
-    it('Deve criar um projeto e retornar o objeto criado mais o User vinculado', () => {
-      const project = TestUtils.getAValidProject();
+    it('Deve criar um projeto e retornar o objeto criado mais o User vinculado', async () => {
+      const project = await TestUtils.getAValidProject();
       const input = TestUtils.getAValidCreateProjectInput();
       mockRepository.create.mockReturnValue(project);
-      const result = resolver.create(input);
+      const result = await resolver.create(input);
       expect(result).toBe(project);
     });
   });
