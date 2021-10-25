@@ -20,7 +20,7 @@ require('dotenv/config');
       database: process.env.DB_DATABASE,
       models: [User, Project],
       autoLoadModels: true,
-      synchronize: true,
+      synchronize: false,
     }),
     UsersModule,
     ProjectsModule,
