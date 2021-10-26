@@ -21,4 +21,10 @@ export class UsersResolver {
   async findAll(): Promise<User[]> {
     return await this.usersService.findAll();
   }
+  @Query(() => User, {
+    name: 'user',
+  })
+  async findOneById(@Args('id') id: number) {
+    return await this.usersService.findOneById(id);
+  }
 }

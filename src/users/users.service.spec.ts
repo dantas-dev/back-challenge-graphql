@@ -37,4 +37,10 @@ describe('UsersService', () => {
       expect(service.findAll).toBeDefined();
     });
   });
+
+  describe('FindOneById', () => {
+    it('Deve ser definido', () => {
+      expect(service.findOneById).toBeDefined();
+    });
+  });
 });

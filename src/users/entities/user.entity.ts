@@ -18,5 +18,6 @@ export class User extends Model {
   email: string;
 
   @HasMany(() => Project)
+  @Field(() => [Project])
   projects: Project[];
 }
