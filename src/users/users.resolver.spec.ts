@@ -61,4 +61,10 @@ describe('UsersResolver', () => {
       expect(result).toEqual(users);
     });
   });
+
+  describe('FindOneById', () => {
+    it('Deve ser definido', () => {
+      expect(resolver.findOneById).toBeDefined();
+    });
+  })
 });
