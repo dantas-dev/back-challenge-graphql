@@ -22,9 +22,9 @@ export class UsersResolver {
     return await this.usersService.findAll();
   }
   @Query(() => User, {
-    name: 'user'
+    name: 'user',
   })
-  findOneById(@Args('id') id: number) {
-    throw new Error('Method not implemented.');
+  async findOneById(@Args('id') id: number) {
+    return await this.usersService.findOneById(id);
   }
 }

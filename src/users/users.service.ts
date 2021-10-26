@@ -10,6 +10,10 @@ export class UsersService {
     return this.usersRepository.create(createUserInput);
   }
 
+  findOneById(id: number) {
+    return this.usersRepository.findOneById(id);
+  }
+
   findAll(): Promise<User[]> {
     return this.usersRepository.findAll();
   }
