@@ -1,0 +1,51 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Project {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Query {
+  users: [User!]!
+  user(id: Int!): User!
+  projects: [Project!]!
+  project(id: Int!): Project!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  removeUser(id: Int!): User!
+  createProject(createProjectInput: CreateProjectInput!): Project!
+  updateProject(updateProjectInput: UpdateProjectInput!): Project!
+  removeProject(id: Int!): Project!
+}
+
+input CreateUserInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateUserInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateProjectInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateProjectInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
