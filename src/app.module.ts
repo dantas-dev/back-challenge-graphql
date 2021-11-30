@@ -6,8 +6,9 @@ import { ProjectsModule } from './projects/projects.module';
 import { join } from 'path';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { GraphQLModule } from '@nestjs/graphql';
-import { User } from './users/entities/user.entity';
-import { Project } from './projects/entities/project.entity';
+import { User } from './users/entities/users.entity';
+import { Project } from './projects/entities/projects.entity';
+require('dotenv/config');
 
 @Module({
   imports: [
