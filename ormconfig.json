@@ -1,0 +1,13 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "root",
+  "password": "mysql",
+  "database": "challenge_graphql",
+  "entities": ["./src/modules/**/infra/typeorm/entities/*.{js,ts}"],
+  "migrations": ["./src/shared/database/infra/typeorm/migrations/*.{js,ts}"],
+  "cli": {
+    "migrationsDir": "./src/shared/database/infra/typeorm/migrations"
+  }
+}

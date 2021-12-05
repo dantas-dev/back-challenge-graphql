@@ -1,0 +1,31 @@
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+type Project {
+  id: ID!
+  name: String!
+  price: Float!
+  user: User!
+}
+
+input UserInput {
+  name: String!
+  email: String!
+}
+
+type Query {
+  users(page: Int, perPage: Int, name: String): [User!]!
+  user(id: ID!): User
+
+  projects(page: Int, perPage: Int, name: String): [Project!]!
+  project(id: ID!): Project
+}
+
+type Mutation {
+  createUser(name: String!, email: String!): User
+
+  createProject(name: String!, price: Float!, user: UserInput!): Project
+}
