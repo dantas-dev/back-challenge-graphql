@@ -54,6 +54,7 @@
 - Used TypeORM instead of Sequelize. In my opinion, TypeORM has a better fit for Typescript than Sequelize. You can check out typeorm here: https://typeorm.io/
 - Used Yarn package manage instead of NPM, as Yarn has a better performance. You can check out yarn here: https://yarnpkg.com/
 - Used some SOLID concepts, as dependency inversion, single resposibility and interface segregation principles.
+- Also used some classic GOF design patterns, such as singleton.
 
 # Are there any improvements you could make to your submission?
 
