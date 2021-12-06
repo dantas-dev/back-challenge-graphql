@@ -20,6 +20,9 @@
 
 ## Database
 
+- MySQL version used: 8.0.27 (https://dev.mysql.com/downloads/mysql/)
+- This version provides a feature for auto generating UUIDs, which I used in this project. Older versions may not contain this feature.
+
 - MySQL database must be configured as follows:
 
   - host: localhost
