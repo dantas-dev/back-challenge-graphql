@@ -13,7 +13,7 @@ INSTRUÇÕES: [AQUI](https://github.com/marcusyoda/back-challenge-graphql/blob/S
 Seguindo os requisitos, a API traz eficiência e escalabilidade com um container mínimo pequeno e leve.
 
 Consulta via Insomnia:
-![Request de Consulta](https://github.com/marcusyoda/front-challenge-spacex/blob/SR-marcusyoda/req-consulta.png)  
+![Request de Consulta](https://github.com/marcusyoda/back-challenge-graphql/blob/SR-marcusyoda/req-consulta.png)  
 
 Mutation via Insomnia:  
 ![Request de Mutation](https://github.com/marcusyoda/back-challenge-graphql/blob/SR-marcusyoda/req-mutation.png)
