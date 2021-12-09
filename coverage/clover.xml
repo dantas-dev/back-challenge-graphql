@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1639010375745" clover="3.2.0">
+  <project timestamp="1639010375745" name="All files">
+    <metrics statements="423" coveredstatements="386" conditionals="348" coveredconditionals="287" methods="147" coveredmethods="118" elements="918" coveredelements="791" complexity="0" loc="423" ncloc="423" packages="13" files="39" classes="39"/>
+    <package name="src">
+      <metrics statements="9" coveredstatements="9" conditionals="19" coveredconditionals="19" methods="1" coveredmethods="1"/>
+      <file name="config.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\config.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="12" coveredconditionals="12" methods="0" coveredmethods="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+      </file>
+      <file name="database.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\database.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="16" type="cond" truecount="4" falsecount="0"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.context">
+      <metrics statements="8" coveredstatements="8" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <file name="index.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\context\index.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="24" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.loaders">
+      <metrics statements="18" coveredstatements="17" conditionals="18" coveredconditionals="17" methods="12" coveredmethods="10"/>
+      <file name="userLoader.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\loaders\userLoader.ts">
+        <metrics statements="18" coveredstatements="17" conditionals="18" coveredconditionals="17" methods="12" coveredmethods="10"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="12" count="16" type="cond" truecount="4" falsecount="0"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="26" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.repositories">
+      <metrics statements="108" coveredstatements="80" conditionals="108" coveredconditionals="78" methods="60" coveredmethods="44"/>
+      <file name="ProjectKnexRepository.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\repositories\ProjectKnexRepository.ts">
+        <metrics statements="56" coveredstatements="40" conditionals="58" coveredconditionals="41" methods="30" coveredmethods="21"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="12" count="8" type="cond" truecount="3" falsecount="1"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="38" count="4" type="cond" truecount="3" falsecount="1"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="41" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="44" count="4" type="cond" truecount="2" falsecount="2"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="47" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="58" count="4" type="stmt"/>
+        <line num="59" count="4" type="stmt"/>
+        <line num="60" count="4" type="stmt"/>
+        <line num="63" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="66" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="69" count="4" type="cond" truecount="2" falsecount="2"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="74" count="4" type="stmt"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="95" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="98" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="103" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="104" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="113" count="1" type="stmt"/>
+        <line num="114" count="1" type="stmt"/>
+        <line num="115" count="1" type="stmt"/>
+        <line num="116" count="1" type="stmt"/>
+        <line num="120" count="8" type="stmt"/>
+      </file>
+      <file name="UserKnexRepository.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\repositories\UserKnexRepository.ts">
+        <metrics statements="52" coveredstatements="40" conditionals="50" coveredconditionals="37" methods="30" coveredmethods="23"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="12" count="8" type="cond" truecount="3" falsecount="1"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="38" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="41" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="44" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="47" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="60" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="63" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="88" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="91" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="96" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="106" count="1" type="stmt"/>
+        <line num="107" count="1" type="stmt"/>
+        <line num="108" count="1" type="stmt"/>
+        <line num="109" count="1" type="stmt"/>
+        <line num="113" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.schema">
+      <metrics statements="31" coveredstatements="31" conditionals="21" coveredconditionals="18" methods="5" coveredmethods="5"/>
+      <file name="index.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\index.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="16" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+      </file>
+      <file name="mutation.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\mutation.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="7" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="48" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="24" count="8" type="stmt"/>
+      </file>
+      <file name="query.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\query.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="7" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="32" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.schema.mutations">
+      <metrics statements="54" coveredstatements="52" conditionals="42" coveredconditionals="36" methods="12" coveredmethods="10"/>
+      <file name="createProject.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\mutations\createProject.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="7" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="16" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+      </file>
+      <file name="createUser.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\mutations\createUser.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="7" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="16" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+      </file>
+      <file name="deleteProject.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\mutations\deleteProject.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="7" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="16" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+      </file>
+      <file name="deleteUser.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\mutations\deleteUser.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="7" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="16" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+      </file>
+      <file name="updateProject.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\mutations\updateProject.ts">
+        <metrics statements="9" coveredstatements="8" conditionals="7" coveredconditionals="6" methods="2" coveredmethods="1"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="16" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+      </file>
+      <file name="updateUser.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\mutations\updateUser.ts">
+        <metrics statements="9" coveredstatements="8" conditionals="7" coveredconditionals="6" methods="2" coveredmethods="1"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="16" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.schema.queries">
+      <metrics statements="67" coveredstatements="65" conditionals="62" coveredconditionals="52" methods="27" coveredmethods="23"/>
+      <file name="nodesToEdges.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\queries\nodesToEdges.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
+      </file>
+      <file name="project.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\queries\project.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="7" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="8" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+      </file>
+      <file name="projects.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\queries\projects.ts">
+        <metrics statements="23" coveredstatements="22" conditionals="22" coveredconditionals="19" methods="10" coveredmethods="8"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="12" count="32" type="cond" truecount="3" falsecount="1"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="45" count="3" type="cond" truecount="3" falsecount="1"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="55" count="3" type="stmt"/>
+        <line num="59" count="3" type="stmt"/>
+        <line num="60" count="3" type="stmt"/>
+      </file>
+      <file name="toConnection.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\queries\toConnection.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+      </file>
+      <file name="user.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\queries\user.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="7" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="8" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+      </file>
+      <file name="users.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\queries\users.ts">
+        <metrics statements="22" coveredstatements="21" conditionals="22" coveredconditionals="19" methods="10" coveredmethods="8"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="12" count="32" type="cond" truecount="3" falsecount="1"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.schema.types">
+      <metrics statements="47" coveredstatements="44" conditionals="29" coveredconditionals="25" methods="22" coveredmethods="18"/>
+      <file name="pageInfo.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\pageInfo.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="26" count="8" type="stmt"/>
+      </file>
+      <file name="project.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\project.ts">
+        <metrics statements="15" coveredstatements="14" conditionals="7" coveredconditionals="6" methods="7" coveredmethods="6"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="8" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="24" count="13" type="stmt"/>
+        <line num="31" count="13" type="stmt"/>
+        <line num="38" count="4" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="50" count="8" type="stmt"/>
+      </file>
+      <file name="user.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\user.ts">
+        <metrics statements="28" coveredstatements="26" conditionals="22" coveredconditionals="19" methods="15" coveredmethods="12"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="12" count="24" type="cond" truecount="3" falsecount="1"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="27" count="12" type="stmt"/>
+        <line num="34" count="12" type="stmt"/>
+        <line num="41" count="12" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="62" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="86" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.schema.types.connections">
+      <metrics statements="16" coveredstatements="16" conditionals="14" coveredconditionals="12" methods="2" coveredmethods="2"/>
+      <file name="projectConnection.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\connections\projectConnection.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="16" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+      </file>
+      <file name="userConnection.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\connections\userConnection.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="16" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.schema.types.edges">
+      <metrics statements="14" coveredstatements="14" conditionals="14" coveredconditionals="12" methods="2" coveredmethods="2"/>
+      <file name="projectEdge.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\edges\projectEdge.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="8" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+      </file>
+      <file name="userEdge.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\edges\userEdge.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="8" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.schema.types.enums">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="direction.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\enums\direction.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+      </file>
+      <file name="projectsOrderField.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\enums\projectsOrderField.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+      </file>
+      <file name="usersOrderField.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\enums\usersOrderField.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.schema.types.inputs">
+      <metrics statements="38" coveredstatements="38" conditionals="14" coveredconditionals="12" methods="2" coveredmethods="2"/>
+      <file name="deleteUser.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\inputs\deleteUser.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+      </file>
+      <file name="newProject.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\inputs\newProject.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+      </file>
+      <file name="newUser.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\inputs\newUser.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+      </file>
+      <file name="projectsOrder.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\inputs\projectsOrder.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="16" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+      </file>
+      <file name="setProject.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\inputs\setProject.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+      </file>
+      <file name="setUser.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\inputs\setUser.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+      </file>
+      <file name="usersOrder.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\schema\types\inputs\usersOrder.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="16" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="functions.ts" path="G:\marcus\Documents\GitHub\back-challenge-graphql\src\utils\functions.ts">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
