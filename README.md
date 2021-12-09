@@ -6,8 +6,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/marcusyoda/back-challenge-graphql)
 
 ## DESAFIO CONCLUÍDO
-DESAFIO: [AQUI](https://github.com/marcusyoda/back-challenge-graphql/blob/SR-marcusyoda/DESAFIO.md)      
-DEMONSTRAÇÃO ONLINE: [spacex.marcusyoda.com.br](https://spacex.marcusyoda.com.br/#/)  
+DESAFIO: [AQUI](https://github.com/marcusyoda/back-challenge-graphql/blob/SR-marcusyoda/DESAFIO.md)       
 INSTRUÇÕES: [AQUI](https://github.com/marcusyoda/back-challenge-graphql/blob/SR-marcusyoda/INSTRUCTIONS.md)      
 
 Seguindo os requisitos, a API traz eficiência e escalabilidade com um container mínimo pequeno e leve.
