@@ -14,17 +14,21 @@
 ## Rodando o projeto
 Instale as dependências com o NPM:
 ```bash
-npm run install
+yarn
 ```
-Inicie o projeto:
+Inicie o compilador typescript em modo watcher:
 ```bash
-npm run serve
+yarn start
 ```
-Agora você pode acessar o sistema em: <http://localhost:8080>
+Sirva a aplicação a partir da build:
+```bash
+node dist/index.js
+```
+Agora você pode acessar o graphql em: <http://localhost:3010/graphql>
 
 ## Tecnologias
 Optei por utilizar o recomendando no desafio.  
-Escolhi o VueJS 2, por ter um repertório maior na comunidade. Dessa forma, evitei imprevistos.  
+Escolhi Node 14, TypeScript,   
 
 
 
