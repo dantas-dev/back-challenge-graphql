@@ -23,7 +23,7 @@ import { UserService } from './user.service';
           CreateDTOClass: CreateUserDTO,
           UpdateDTOClass: UpdateUserDTO,
           enableTotalCount: true,
-          pagingStrategy: PagingStrategies.OFFSET,
+          pagingStrategy: PagingStrategies.CURSOR,
         },
       ],
     }),
