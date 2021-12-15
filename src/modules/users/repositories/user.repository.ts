@@ -1,7 +1,7 @@
 import { InjectQueryService, QueryService } from '@nestjs-query/core';
 import { Injectable } from '@nestjs/common';
 import { UserEntity } from '../entities/user.entity';
-import { CreateUserInput } from '../inputs/createUser.input';
+import { CreateUserDTO } from '../dtos/createUser.input';
 
 @Injectable()
 export class UserRepository {
@@ -9,7 +9,7 @@ export class UserRepository {
     @InjectQueryService(UserEntity) readonly service: QueryService<UserEntity>,
   ) {}
 
-  async createOne(createUserInput: CreateUserInput) {
+  async createOne(createUserInput: CreateUserDTO) {
     return await this.service.createOne(createUserInput);
   }
 

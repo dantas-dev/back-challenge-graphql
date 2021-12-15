@@ -4,10 +4,10 @@ import {
 } from '@nestjs-query/query-graphql';
 import { NestjsQuerySequelizeModule } from '@nestjs-query/query-sequelize';
 import { Module } from '@nestjs/common';
-import { UserDTO } from './dtos/user.dto';
+import { UserClassDTO } from './dtos/userClass.dto';
 import { UserEntity } from './entities/user.entity';
-import { CreateUserInput } from './inputs/createUser.input';
-import { UpdateUserInput } from './inputs/updateUser.input';
+import { CreateUserDTO } from './dtos/createUser.input';
+import { UpdateUserDTO } from './dtos/updateUser.input';
 import { UserRepository } from './repositories/user.repository';
 import { UserController } from './user.controller';
 import { UserService } from './user.service';
@@ -18,10 +18,10 @@ import { UserService } from './user.service';
       imports: [NestjsQuerySequelizeModule.forFeature([UserEntity])],
       resolvers: [
         {
-          DTOClass: UserDTO,
+          DTOClass: UserClassDTO,
           EntityClass: UserEntity,
-          CreateDTOClass: CreateUserInput,
-          UpdateDTOClass: UpdateUserInput,
+          CreateDTOClass: CreateUserDTO,
+          UpdateDTOClass: UpdateUserDTO,
           enableTotalCount: true,
           pagingStrategy: PagingStrategies.OFFSET,
         },
