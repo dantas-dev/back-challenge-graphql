@@ -4,6 +4,7 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { AppConfigModule } from './modules/appConfig/appConfig.module';
 import { AppConfigService } from './modules/appConfig/appConfig.service';
 import { SequelizeModule } from '@nestjs/sequelize';
+import { UserModule } from './modules/users/user.module';
 
 @Module({
   imports: [
@@ -19,6 +20,16 @@ import { SequelizeModule } from '@nestjs/sequelize';
       }),
       inject: [AppConfigService],
     }),
+    GraphQLModule.forRootAsync({
+      imports: [AppConfigModule],
+      useFactory: (configService: AppConfigService) => ({
+        debug: configService.debug,
+        playground: configService.graphqlPlayground,
+        autoSchemaFile: true,
+      }),
+      inject: [AppConfigService],
+    }),
+    UserModule,
   ],
   controllers: [],
   providers: [],
