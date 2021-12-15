@@ -5,6 +5,7 @@ import { AppConfigModule } from './modules/appConfig/appConfig.module';
 import { AppConfigService } from './modules/appConfig/appConfig.service';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { UserModule } from './modules/users/user.module';
+import { AppService } from './app.service';
 
 @Module({
   imports: [
@@ -31,7 +32,6 @@ import { UserModule } from './modules/users/user.module';
     }),
     UserModule,
   ],
-  controllers: [],
-  providers: [],
+  providers: [AppService],
 })
 export class AppModule {}

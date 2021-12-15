@@ -10,7 +10,6 @@ import {
   DataType,
   DeletedAt,
 } from 'sequelize-typescript';
-
 export class BaseEntity<
   TModelAttributes extends {} = any,
   TCreationAttributes extends {} = TModelAttributes,

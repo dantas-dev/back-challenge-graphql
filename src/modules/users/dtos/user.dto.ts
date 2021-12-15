@@ -6,4 +6,7 @@ import { BaseDTO } from '../../../common/baseDto/base.dto';
 export class UserDTO extends BaseDTO {
   @Field()
   name: String;
+
+  @Field()
+  email: String;
 }

@@ -8,6 +8,9 @@ import { UserDTO } from './dtos/user.dto';
 import { UserEntity } from './entities/user.entity';
 import { CreateUserInput } from './inputs/createUser.input';
 import { UpdateUserInput } from './inputs/updateUser.input';
+import { UserRepository } from './repositories/user.repository';
+import { UserController } from './user.controller';
+import { UserService } from './user.service';
 
 @Module({
   imports: [
@@ -25,5 +28,8 @@ import { UpdateUserInput } from './inputs/updateUser.input';
       ],
     }),
   ],
+  controllers: [UserController],
+  providers: [UserRepository, UserService],
+  exports: [UserService],
 })
 export class UserModule {}

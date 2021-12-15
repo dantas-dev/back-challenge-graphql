@@ -5,4 +5,7 @@ import { BaseEntity } from '../../../common/baseEntity/base.entity';
 export class UserEntity extends BaseEntity<UserEntity, Partial<UserEntity>> {
   @Column
   name: string;
+
+  @Column
+  email: string;
 }
