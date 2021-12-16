@@ -9,7 +9,6 @@ export class UserService {
   constructor(private userRepository: UserRepository) {}
 
   async createOne(createUserInput: CreateUserDTO): Promise<UserEntity> {
-    console.log('createUserInput: ' + createUserInput);
     const createdUser = await this.userRepository.createOne(createUserInput);
 
     if (!createdUser) {

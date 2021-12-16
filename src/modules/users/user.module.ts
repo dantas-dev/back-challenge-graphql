@@ -33,6 +33,6 @@ import UserProjectEntity from './entities/user_project.entity';
   ],
   controllers: [UserController],
   providers: [UserRepository, UserService],
-  exports: [UserService],
+  exports: [UserRepository, UserService],
 })
 export class UserModule {}
