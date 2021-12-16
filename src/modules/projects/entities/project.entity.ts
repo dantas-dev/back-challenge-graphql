@@ -25,13 +25,6 @@ export class ProjectEntity extends BaseEntity<
   })
   price: number;
 
-  // @ForeignKey(() => UserEntity)
-  // @Column
-  // projectID: string;
-
-  // @BelongsTo(() => UserEntity)
-  // user: UserEntity;
-
   @BelongsToMany(() => UserEntity, () => UserProjectEntity)
   users: UserEntity[];
 }
