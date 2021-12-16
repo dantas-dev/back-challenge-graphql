@@ -6,11 +6,9 @@ import { ProjectRepository } from './repositories/project.repository';
 
 @Injectable()
 export class ProjectService {
-  constructor(private userRepository: ProjectRepository) {}
-
+  constructor(private projectRepository: ProjectRepository) {}
   async createOne(createUserInput: CreateProjectDTO): Promise<ProjectEntity> {
-    console.log('createUserInput: ' + createUserInput);
-    const createdUser = await this.userRepository.createOne(createUserInput);
+    const createdUser = await this.projectRepository.createOne(createUserInput);
 
     if (!createdUser) {
       throw new ConflictException('User was not created');
@@ -20,6 +18,10 @@ export class ProjectService {
   }
 
   async findAll() {
-    return await this.userRepository.findAll();
+    return await this.projectRepository.findAll();
+  }
+
+  async addUsersToProject(userID: string, projectID: string[]) {
+    return await this.projectRepository.addUsersToProject(userID, projectID);
   }
 }

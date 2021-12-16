@@ -11,11 +11,14 @@ import { UpdateUserDTO } from './dtos/updateUser.input';
 import { UserRepository } from './repositories/user.repository';
 import { UserController } from './user.controller';
 import { UserService } from './user.service';
+import UserProjectEntity from './entities/user_project.entity';
 
 @Module({
   imports: [
     NestjsQueryGraphQLModule.forFeature({
-      imports: [NestjsQuerySequelizeModule.forFeature([UserEntity])],
+      imports: [
+        NestjsQuerySequelizeModule.forFeature([UserEntity, UserProjectEntity]),
+      ],
       resolvers: [
         {
           DTOClass: UserClassDTO,
