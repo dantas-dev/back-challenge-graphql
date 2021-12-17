@@ -1,6 +1,7 @@
 # envs
 .env
 .env.*
+!.env.example
 
 #localdb
 *.db

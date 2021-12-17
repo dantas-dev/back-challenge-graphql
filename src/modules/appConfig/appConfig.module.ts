@@ -9,7 +9,7 @@ const ambient = process.env.NODE_ENV;
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: `.env.${ambient}`,
+      envFilePath: ambient ? `.env.${ambient}` : `.env`,
       load: [database, graphql],
     }),
   ],
