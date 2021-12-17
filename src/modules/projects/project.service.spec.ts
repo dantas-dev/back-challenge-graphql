@@ -1,4 +1,3 @@
-import { ConflictException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { ProjectService } from './project.service';
 import { ProjectRepository } from './repositories/project.repository';

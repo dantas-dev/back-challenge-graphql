@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { Timeout } from '@nestjs/schedule';
-import { Connection } from 'sequelize/dist/lib/connection-manager';
 import { ProjectService } from './modules/projects/project.service';
 import { UserService } from './modules/users/user.service';
 

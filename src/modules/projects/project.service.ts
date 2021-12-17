@@ -1,4 +1,3 @@
-import { InjectQueryService, QueryService } from '@nestjs-query/core';
 import { ConflictException, Injectable } from '@nestjs/common';
 import { CreateProjectDTO } from './dtos/createProject.dto';
 import { ProjectEntity } from './entities/project.entity';
