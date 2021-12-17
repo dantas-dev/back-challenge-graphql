@@ -1,109 +1,94 @@
-# 👾 Back-End challenge - Graphql API
-This is a quick coding challenge we designed to assess your qualifications as a potential back-end developer. It's important to note that this is by no means a test. We just want to get a sense of how you write code and solve problems.
+# CHALLENGE APP
 
-## Getting started
-To get started with this challenge: 
-1) Fork this repository.
-2) Create a branch with the name: ``yourlevel-yourname``, example: ``JR-jhondoe``
-3) When you finish, make a pull request with name ``yourname``, example ``Jhon Doe`` and comment with your level (JR/PL/SR).
+![](app.png)
 
-## The Challenge
-We'll be looking for **simple, well-designed and tested(only PL/SR)** code in the submission.
+This project was bootstrapped with [NestJS](https://docs.nestjs.com/) <br/>
 
-Please include a ``INSTRUCTIONS.md``:
-- Setup instructions
-- How did you decide which technologies to use as part of your solution
-- Are there any improvements you could make to your submission
-- What would you do differently if you were allocated more time
+# Requirements
 
-## Details
-- Create a Node Graphql API based on the queries and mutations below.
+- Create a Node Graphql API based on the queries and mutations. Learn more at [README.md](./README.md).
 - Feel free to choose the way that you will pass the input data (queries and mutations)
 - Use your creativity to improve what you want.
 
-### Queries
-#### Projects: List all projects
-<details><summary>Query Details</summary>
+Learn More:
 
-<p>
+- [CHALLENGE APP](#challenge-app)
+- [Requirements](#requirements)
+- [Technologies](#technologies)
+- [How to run with docker](#how-to-run-with-docker)
+- [How to run with yarn](#how-to-run-with-yarn)
+- [How to run tests](#how-to-run-tests)
+- [How did you decide which technologies to use as part of your solution](#how-did-you-decide-which-technologies-to-use-as-part-of-your-solution)
+- [Are there any improvements you could make to your submission](#are-there-any-improvements-you-could-make-to-your-submission)
+- [What would you do differently if you were allocated more time](#what-would-you-do-differently-if-you-were-allocated-more-time)
+
+
+# Technologies
+
+- [NestJS](https://nestjs.com/)
+- [Sequelize TypeScript](https://github.com/RobinBuschmann/sequelize-typescript)
+- [Apollo Graphql](https://www.apollographql.com/)
+- [Nestjs Query](https://doug-martin.github.io/nestjs-query/)
+- [Helmet](https://helmetjs.github.io/)
+- [Class Validator](https://github.com/typestack/class-validator)
+- [Class Transformer](https://github.com/typestack/class-validator)
+- [Jest](https://jestjs.io/)
+- [Supertest](https://github.com/visionmedia/supertest)
+- [Node](https://nodejs.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Docker](https://www.docker.com/)
   
-```graphql
-query projects {
-  id
-  name
-  price
-  user {
-    id
-    name
-    email
-  }
-}
+# How to run with docker
+
+- With [docker](https://docs.docker.com/install/ 'docker') and [docker compose](https://docs.docker.com/compose/install/ 'docker compose') installed, run the following:
+
+```
+git clone https://github.com/rafaelfigueiredo-l/back-challenge-graphql
+cd back-challenge-graphql
+cp .env.example .env
+yarn install
+docker-compose up
 ```
 
-</p>
-</details>
+After docker create containers you can access the app at:
 
-#### Users: List all users
-<details><summary>Query Details</summary>
+- http://localhost:3005/graphql
 
-<p>
-  
-```graphql
-query users {
-  id
-  name
-  email
-}
+# How to run with yarn
+
+Open .env.example and change the vars to connect to your database.
+
+```
+git clone https://github.com/rafaelfigueiredo-l/back-challenge-graphql
+cd back-challenge-graphql
+yarn install
+cp .env.example .env
+yarn start
 ```
 
-</p>
-</details>
+# How to run tests
 
-### Mutations
-#### CreateUser: create a user
-<details><summary>Mutation Details</summary>
+The tests runs in a separate database using the node_env=test environment.
+You are able to create a PostgreSQL database using the docker command: `docker-compose -f docker-compose-test.yml up`
 
-<p>
-  
-```graphql
-mutation createUser {
-  id
-  name
-  email
-}
+```
+cd app
+yarn test
+yarn test:e2e
+yarn test:cov
 ```
 
-</p>
-</details>
+# How did you decide which technologies to use as part of your solution
+I decided to use NestJS because the challenge asks for a well designed architeture that can be easily consumed by REST or GraphQL.
+Using Single Responsibility, Dependency Inversion Principle, Interface Segregation and Dependency injection I was able to create well defined contracts and needed tests.
 
-#### CreateProject: create a project
-<details><summary>Mutation Details</summary>
+# Are there any improvements you could make to your submission
+Talking about software development, I think every app is possible to improve in some aspect. 
 
-<p>
-  
-```graphql
-mutation createProject {
-  id
-  name
-  email
-  user {
-    id
-    name
-    email
-  }
-}
-```
+- Created more tests
 
-</p>
-</details>
+# What would you do differently if you were allocated more time
 
-## Required
-- Node,Typescript and Graphql with a DB of your choose.
-- Migrations
-- Pagination and Filters (example: by ID and name)
-- TDD (only PL/SR)
-
-## Desirable
-- Apollo
-- Sequelize with MySQL
-- Clean Architecture, Design Patterns and SOLID
+- Added Authentication
+- Created pipelines scripts for CI/CD
+- Improvements with docs
