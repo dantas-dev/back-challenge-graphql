@@ -8,8 +8,8 @@ services:
   app:
     container_name: challenge_app
     image: challenge_app:1.0
-    env_file: ./.env.development
     build: .
+    env_file: ./.env
     ports:
       - 3005:3005
     depends_on:
@@ -21,10 +21,11 @@ services:
     container_name: challenge_db
     image: postgres:11.5
     restart: always
+    env_file: ./.env
     environment:
-      - POSTGRES_USER=hakunamatata
-      - POSTGRES_DB=hakunamatata
-      - POSTGRES_PASSWORD=hakunamatata
+      - POSTGRES_USER=$DATABASE_USER
+      - POSTGRES_DB=$DATABASE_PASSWORD
+      - POSTGRES_PASSWORD=$DATABASE_NAME
     ports:
       - 5432:5432
     expose:
