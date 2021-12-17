@@ -6,19 +6,34 @@ import { Dialect } from 'sequelize/dist';
 export class AppConfigService {
   constructor(private configService: ConfigService) {}
 
-  get type() {
-    return this.configService.get<Dialect>('database.type');
+  get user() {
+    return this.configService.get<string>('database.user');
+  }
+
+  get password() {
+    return this.configService.get<string>('database.password');
+  }
+
+  get name() {
+    return this.configService.get<string>('database.name');
+  }
+
+  get host() {
+    return this.configService.get<string>('database.host');
   }
 
   get port() {
     return this.configService.get<number>('database.port');
   }
-  get name() {
-    return this.configService.get<string>('database.name');
+
+  get dialect() {
+    return this.configService.get<Dialect>('database.dialect');
   }
+
   get autoloadEntities() {
     return this.configService.get<boolean>('database.autoloadEntities');
   }
+
   get syncronyze() {
     return this.configService.get<boolean>('database.syncronyze');
   }

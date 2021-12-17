@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Timeout } from '@nestjs/schedule';
+import { Connection } from 'sequelize/dist/lib/connection-manager';
 import { ProjectService } from './modules/projects/project.service';
 import { UserService } from './modules/users/user.service';
 
@@ -12,6 +13,10 @@ export class AppService {
 
   @Timeout(100)
   async initDatabaseData() {
+    const users = await this.userService.findAll();
+
+    if (users.length) return false;
+
     const user1 = await this.userService.createOne({
       name: 'Axe Smith',
       email: 'axe@challenge.com',
@@ -66,5 +71,7 @@ export class AppService {
       user2.id,
       user3.id,
     ]);
+
+    return true;
   }
 }

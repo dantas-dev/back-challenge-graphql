@@ -15,8 +15,12 @@ import { ProjectModule } from './modules/projects/project.module';
     SequelizeModule.forRootAsync({
       imports: [AppConfigModule],
       useFactory: (configService: AppConfigService) => ({
-        dialect: configService.type,
+        username: configService.name,
+        password: configService.password,
         database: configService.name,
+        host: configService.host,
+        port: configService.port,
+        dialect: configService.dialect,
         autoLoadModels: configService.autoloadEntities,
         synchronize: configService.syncronyze,
       }),
