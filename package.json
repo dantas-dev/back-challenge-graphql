@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@graphql-tools/load-files": "^6.5.3",
+    "apollo-datasource-rest": "^3.4.0",
+    "apollo-server": "^3.5.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "graphql": "^16.2.0",
+    "graphql-tools": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.4"
+  },
+  "name": "graphql_sequelize",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/maiquelveve/graphql_sequelize.git",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js -e js,gql"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.3.0"
+  }
+}

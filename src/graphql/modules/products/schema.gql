@@ -1,0 +1,25 @@
+type Project {
+    id: ID
+    name: String
+    price: Float
+    user: User
+}
+
+type User {
+    id: ID
+    name: String
+    email: String
+}
+
+input ProjectInput {
+    name: String
+    price: Float
+}
+
+type Query {
+    projects(id: ID, name: String): [Project]
+} 
+
+type Mutation {
+    createProject(data: ProjectInput!): Project!
+}
