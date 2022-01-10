@@ -1,0 +1,422 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateManyProjectsInput {
+  """Array of records to create"""
+  projects: [CreateProjectInput!]!
+}
+
+input CreateManyUsersInput {
+  """Array of records to create"""
+  users: [CreateUserInput!]!
+}
+
+input CreateOneProjectInput {
+  """The record to create"""
+  project: CreateProjectInput!
+}
+
+input CreateOneUserInput {
+  """The record to create"""
+  user: CreateUserInput!
+}
+
+input CreateProjectInput {
+  name: String!
+  price: Float!
+  user: String!
+}
+
+input CreateUserInput {
+  email: String!
+  name: String!
+}
+
+input DeleteManyProjectsInput {
+  """Filter to find records to delete"""
+  filter: ProjectDeleteFilter!
+}
+
+type DeleteManyResponse {
+  """The number of records deleted."""
+  deletedCount: Int!
+}
+
+input DeleteManyUsersInput {
+  """Filter to find records to delete"""
+  filter: UserDeleteFilter!
+}
+
+input DeleteOneProjectInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneUserInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+type Mutation {
+  createManyProjects(input: CreateManyProjectsInput!): [Project!]!
+  createManyUsers(input: CreateManyUsersInput!): [User!]!
+  createOneProject(input: CreateOneProjectInput!): Project!
+  createOneUser(input: CreateOneUserInput!): User!
+  deleteManyProjects(input: DeleteManyProjectsInput!): DeleteManyResponse!
+  deleteManyUsers(input: DeleteManyUsersInput!): DeleteManyResponse!
+  deleteOneProject(input: DeleteOneProjectInput!): ProjectDeleteResponse!
+  deleteOneUser(input: DeleteOneUserInput!): UserDeleteResponse!
+  removeUserFromProject(input: RemoveUserFromProjectInput!): Project!
+  setUserOnProject(input: SetUserOnProjectInput!): Project!
+  updateManyProjects(input: UpdateManyProjectsInput!): UpdateManyResponse!
+  updateManyUsers(input: UpdateManyUsersInput!): UpdateManyResponse!
+  updateOneProject(input: UpdateOneProjectInput!): Project!
+  updateOneUser(input: UpdateOneUserInput!): User!
+}
+
+input NumberFieldComparison {
+  between: NumberFieldComparisonBetween
+  eq: Float
+  gt: Float
+  gte: Float
+  in: [Float!]
+  is: Boolean
+  isNot: Boolean
+  lt: Float
+  lte: Float
+  neq: Float
+  notBetween: NumberFieldComparisonBetween
+  notIn: [Float!]
+}
+
+input NumberFieldComparisonBetween {
+  lower: Float!
+  upper: Float!
+}
+
+type OffsetPageInfo {
+  """true if paging forward and there are more records."""
+  hasNextPage: Boolean
+
+  """true if paging backwards and there are more records."""
+  hasPreviousPage: Boolean
+}
+
+input OffsetPaging {
+  """Limit the number of records returned"""
+  limit: Int
+
+  """Offset to start returning records from"""
+  offset: Int
+}
+
+type Project {
+  id: String!
+  name: String!
+  price: Float!
+  user: User!
+}
+
+type ProjectAggregateGroupBy {
+  id: String
+  name: String
+  price: Float
+  user: String
+}
+
+type ProjectAvgAggregate {
+  price: Float
+}
+
+type ProjectConnection {
+  """Array of nodes."""
+  nodes: [Project!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectCountAggregate {
+  id: Int
+  name: Int
+  price: Int
+  user: Int
+}
+
+input ProjectDeleteFilter {
+  and: [ProjectDeleteFilter!]
+  id: StringFieldComparison
+  name: StringFieldComparison
+  or: [ProjectDeleteFilter!]
+  price: NumberFieldComparison
+  user: StringFieldComparison
+}
+
+type ProjectDeleteResponse {
+  id: String
+  name: String
+  price: Float
+  user: String
+}
+
+input ProjectFilter {
+  and: [ProjectFilter!]
+  id: StringFieldComparison
+  name: StringFieldComparison
+  or: [ProjectFilter!]
+  price: NumberFieldComparison
+  user: StringFieldComparison
+}
+
+type ProjectMaxAggregate {
+  id: String
+  name: String
+  price: Float
+  user: String
+}
+
+type ProjectMinAggregate {
+  id: String
+  name: String
+  price: Float
+  user: String
+}
+
+input ProjectSort {
+  direction: SortDirection!
+  field: ProjectSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectSortFields {
+  id
+  name
+  price
+  user
+}
+
+type ProjectSumAggregate {
+  price: Float
+}
+
+input ProjectUpdateFilter {
+  and: [ProjectUpdateFilter!]
+  id: StringFieldComparison
+  name: StringFieldComparison
+  or: [ProjectUpdateFilter!]
+  price: NumberFieldComparison
+  user: StringFieldComparison
+}
+
+type Query {
+  project(
+    """The id of the record to find."""
+    id: ID!
+  ): Project
+  projects(
+    """Specify to filter the records returned."""
+    filter: ProjectFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectSort!] = []
+  ): ProjectConnection!
+  user(
+    """The id of the record to find."""
+    id: ID!
+  ): User
+  users(
+    """Specify to filter the records returned."""
+    filter: UserFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [UserSort!] = []
+  ): UserConnection!
+}
+
+input RemoveUserFromProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The id of relation."""
+  relationId: ID!
+}
+
+input SetUserOnProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The id of relation."""
+  relationId: ID!
+}
+
+"""Sort Directions"""
+enum SortDirection {
+  ASC
+  DESC
+}
+
+"""Sort Nulls Options"""
+enum SortNulls {
+  NULLS_FIRST
+  NULLS_LAST
+}
+
+input StringFieldComparison {
+  eq: String
+  gt: String
+  gte: String
+  iLike: String
+  in: [String!]
+  is: Boolean
+  isNot: Boolean
+  like: String
+  lt: String
+  lte: String
+  neq: String
+  notILike: String
+  notIn: [String!]
+  notLike: String
+}
+
+input UpdateManyProjectsInput {
+  """Filter used to find fields to update"""
+  filter: ProjectUpdateFilter!
+
+  """The update to apply to all records found using the filter"""
+  update: UpdateProjectInput!
+}
+
+type UpdateManyResponse {
+  """The number of records updated."""
+  updatedCount: Int!
+}
+
+input UpdateManyUsersInput {
+  """Filter used to find fields to update"""
+  filter: UserUpdateFilter!
+
+  """The update to apply to all records found using the filter"""
+  update: UpdateUserInput!
+}
+
+input UpdateOneProjectInput {
+  """The id of the record to update"""
+  id: ID!
+
+  """The update to apply."""
+  update: UpdateProjectInput!
+}
+
+input UpdateOneUserInput {
+  """The id of the record to update"""
+  id: ID!
+
+  """The update to apply."""
+  update: UpdateUserInput!
+}
+
+input UpdateProjectInput {
+  id: Int!
+  name: String
+  price: Float
+  user: String
+}
+
+input UpdateUserInput {
+  email: String
+  id: String!
+  name: String
+}
+
+type User {
+  email: String!
+  id: String!
+  name: String!
+}
+
+type UserAggregateGroupBy {
+  email: String
+  id: String
+  name: String
+}
+
+type UserConnection {
+  """Array of nodes."""
+  nodes: [User!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type UserCountAggregate {
+  email: Int
+  id: Int
+  name: Int
+}
+
+input UserDeleteFilter {
+  and: [UserDeleteFilter!]
+  email: StringFieldComparison
+  id: StringFieldComparison
+  name: StringFieldComparison
+  or: [UserDeleteFilter!]
+}
+
+type UserDeleteResponse {
+  email: String
+  id: String
+  name: String
+}
+
+input UserFilter {
+  and: [UserFilter!]
+  email: StringFieldComparison
+  id: StringFieldComparison
+  name: StringFieldComparison
+  or: [UserFilter!]
+}
+
+type UserMaxAggregate {
+  email: String
+  id: String
+  name: String
+}
+
+type UserMinAggregate {
+  email: String
+  id: String
+  name: String
+}
+
+input UserSort {
+  direction: SortDirection!
+  field: UserSortFields!
+  nulls: SortNulls
+}
+
+enum UserSortFields {
+  email
+  id
+  name
+}
+
+input UserUpdateFilter {
+  and: [UserUpdateFilter!]
+  email: StringFieldComparison
+  id: StringFieldComparison
+  name: StringFieldComparison
+  or: [UserUpdateFilter!]
+}

@@ -13,8 +13,13 @@ We'll be looking for **simple, well-designed and tested(only PL/SR)** code in th
 Please include a ``INSTRUCTIONS.md``:
 - Setup instructions
 - How did you decide which technologies to use as part of your solution
+  I was informed that the company is evaluating NestJS, TypeORM and GraphQL, so I solved the implementation of the challenge using these technologies.
+
 - Are there any improvements you could make to your submission
+  As I'm new to GraphQL I think I could evaluate the Schema First approach and have more control using resolvers, although NestJS makes development in the Code First approach much easier.
+
 - What would you do differently if you were allocated more time
+  I would study more NestJS and GraphQL in order to use all the features of the frameworks
 
 ## Details
 - Create a Node Graphql API based on the queries and mutations below.
