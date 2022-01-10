@@ -3,9 +3,10 @@ This is a quick coding challenge we designed to assess your qualifications as a 
 
 ## Getting started
 To get started with this challenge: 
-1) Fork this repository.
-2) Create a branch with the name: ``yourlevel-yourname``, example: ``JR-jhondoe``
-3) When you finish, make a pull request with name ``yourname``, example ``Jhon Doe`` and comment with your level (JR/PL/SR).
+1) Clone this repository.
+2) Create the database container with ``docker-compose up -D``
+3) Run ``yarn`` in terminal to install project dependencies
+4) Run ``yarn start:dev`` to start the application
 
 ## The Challenge
 We'll be looking for **simple, well-designed and tested(only PL/SR)** code in the submission.
@@ -13,13 +14,13 @@ We'll be looking for **simple, well-designed and tested(only PL/SR)** code in th
 Please include a ``INSTRUCTIONS.md``:
 - Setup instructions
 - How did you decide which technologies to use as part of your solution
-  I was informed that the company is evaluating NestJS, TypeORM and GraphQL, so I solved the implementation of the challenge using these technologies.
+  - I was informed that the company is evaluating NestJS, TypeORM and GraphQL, so I solved the implementation of the challenge using these technologies.
 
 - Are there any improvements you could make to your submission
-  As I'm new to GraphQL I think I could evaluate the Schema First approach and have more control using resolvers, although NestJS makes development in the Code First approach much easier.
+  - As I'm new to GraphQL I think I could evaluate the Schema First approach and have more control using resolvers, although NestJS makes development in the Code First approach much easier.
 
 - What would you do differently if you were allocated more time
-  I would study more NestJS and GraphQL in order to use all the features of the frameworks
+  - I would study more NestJS and GraphQL in order to use all the features of the frameworks
 
 ## Details
 - Create a Node Graphql API based on the queries and mutations below.
