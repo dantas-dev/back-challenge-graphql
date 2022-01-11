@@ -17,7 +17,7 @@ Please include a ``INSTRUCTIONS.md``:
   - I was informed that the company is evaluating NestJS, TypeORM and GraphQL, so I solved the implementation of the challenge using these technologies.
 
 - Are there any improvements you could make to your submission
-  - As I'm new to GraphQL I think I could evaluate the Schema First approach and have more control using resolvers e services, although NestJS makes development in the Code First approach much easier.
+  - As I'm new to GraphQL I think I could evaluate the Schema First approach and have more control using resolvers and services, although NestJS makes development in the Code First approach much easier.
 
 - What would you do differently if you were allocated more time
   - I would study more NestJS and GraphQL in order to use all the features of the frameworks
