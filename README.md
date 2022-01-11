@@ -4,7 +4,7 @@ This is a quick coding challenge we designed to assess your qualifications as a 
 ## Getting started
 To get started with this challenge: 
 1) Clone this repository.
-2) Create the database container with ``docker-compose up -D``
+2) Create the database container with ``docker-compose up``
 3) Run ``yarn`` in terminal to install project dependencies
 4) Run ``yarn start:dev`` to start the application
 
