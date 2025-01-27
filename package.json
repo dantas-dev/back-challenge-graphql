@@ -1,0 +1,32 @@
+{
+  "name": "back-to-do-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "db:create": "npx sequelize-cli db:create",
+    "db:migrate": "npx sequelize-cli db:migrate"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.13.0",
+    "dotenv": "16.4.7",
+    "express": "4.21.2",
+    "graphql": "16.10.0",
+    "mysql2": "^3.12.0",
+    "reflect-metadata": "0.2.2",
+    "sequelize": "^6.37.5",
+    "type-graphql": "2.0.0-rc.2",
+    "typeorm": "0.3.20"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.0",
+    "@types/node": "22.10.5",
+    "nodemon": "3.1.9",
+    "ts-node-dev": "2.0.0",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3"
+  }
+}
